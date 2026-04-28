@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PHPC Co., Ltd. Inc · News & Updates</title>
+  <meta content="Latest News and Updates | PHPC Co., Ltd. Inc." name="description">
+  <meta content="construction news,news" name="keywords">
+  <meta name="robots" content="noindex,nofollow">
+  
+  <!-- Favicons -->
+  <link href="assets/img/kan.ico" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Modern Box-Style News Enhancements -->
+  <style>
+    /* ===== MODERN BOX-STYLE NEWS DESIGN ===== */
+    #about {
+      background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+      padding: 40px 0;
+    }
+
+    .section-header {
+      margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: #1e2c3a;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+    }
+
+    .section-header h2:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #0d6efd, #6ea8fe);
+      border-radius: 2px;
+    }
+
+    /* Modern Box Card Design */
+    .news-box-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      margin-bottom: 25px;
+      height: auto;
+    }
+
+    .news-box-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(13, 110, 253, 0.12);
+      border-color: rgba(13, 110, 253, 0.1);
+    }
+
+    /* Image Container */
+    .news-image-wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 220px;
+    }
+
+    .news-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .news-box-card:hover .news-image-wrapper img {
+      transform: scale(1.05);
+    }
+
+    /* Category Badge */
+    .news-category {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      background: linear-gradient(135deg, #0d6efd, #0a58ca);
+      color: white;
+      padding: 6px 15px;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+      z-index: 2;
+    }
+
+    .category-safety {
+      background: linear-gradient(135deg, #198754, #146c43);
+      box-shadow: 0 4px 10px rgba(25, 135, 84, 0.3);
+    }
+
+    .category-csr {
+      background: linear-gradient(135deg, #fd7e14, #dc6502);
+      box-shadow: 0 4px 10px rgba(253, 126, 20, 0.3);
+    }
+
+    .category-company {
+      background: linear-gradient(135deg, #6f42c1, #5a32a3);
+      box-shadow: 0 4px 10px rgba(111, 66, 193, 0.3);
+    }
+
+    /* Content Area */
+    .news-content {
+      padding: 25px 20px 20px;
+    }
+
+    .news-meta-box {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .news-date {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #6c757d;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .news-date i {
+      color: #0d6efd;
+      font-size: 1rem;
+    }
+
+    .read-time {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #6c757d;
+      font-size: 0.85rem;
+    }
+
+    .news-title-box {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 15px;
+    }
+
+    .news-title-box a {
+      color: #1e2c3a;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      display: inline-block;
+    }
+
+    .news-title-box a:hover {
+      color: #0d6efd;
+    }
+
+    .news-excerpt {
+      color: #6c757d;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .read-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #0d6efd;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: gap 0.3s ease;
+      padding: 8px 0;
+      border-bottom: 2px solid transparent;
+    }
+
+    .read-more-btn i {
+      transition: transform 0.3s ease;
+    }
+
+    .read-more-btn:hover {
+      gap: 12px;
+      color: #0a58ca;
+      border-bottom-color: #0d6efd;
+    }
+
+    .read-more-btn:hover i {
+      transform: translateX(5px);
+    }
+
+    /* Grid Layout for Boxes */
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 30px;
+      align-items: start;
+    }
+
+    /* Featured Large Box */
+    .news-box-card.featured {
+      grid-column: span 2;
+    }
+
+    .news-box-card.featured .news-image-wrapper {
+      height: 300px;
+    }
+
+    .news-box-card.featured .news-title-box {
+      font-size: 1.5rem;
+    }
+
+    /* Filter Bar */
+    .news-filter-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .filter-buttons {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 8px 20px;
+      border: 2px solid #e9ecef;
+      background: white;
+      border-radius: 30px;
+      color: #6c757d;
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: #0d6efd;
+      border-color: #0d6efd;
+      color: white;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      background: white;
+      border-radius: 30px;
+      padding: 5px 5px 5px 20px;
+      border: 2px solid #e9ecef;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      padding: 8px 10px;
+      width: 200px;
+      font-size: 0.9rem;
+    }
+
+    .search-box button {
+      background: #0d6efd;
+      border: none;
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .search-box button:hover {
+      background: #0a58ca;
+    }
+
+    /* No Results Message */
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      grid-column: 1 / -1;
+    }
+
+    .no-results i {
+      font-size: 4rem;
+      color: #0d6efd;
+      opacity: 0.5;
+      margin-bottom: 20px;
+    }
+
+    .no-results h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #1e2c3a;
+      margin-bottom: 10px;
+    }
+
+    .no-results p {
+      color: #6c757d;
+      margin-bottom: 20px;
+    }
+
+    .reset-search-btn {
+      padding: 10px 25px;
+      background: #0d6efd;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .reset-search-btn:hover {
+      background: #0a58ca;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+    }
+
+    /* Results Counter */
+    .results-counter {
+      margin-bottom: 20px;
+      color: #6c757d;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .results-counter span {
+      background: #0d6efd;
+      color: white;
+      padding: 2px 10px;
+      border-radius: 20px;
+      margin-left: 8px;
+      font-size: 0.8rem;
+    }
+
+    /* Pagination */
+    .news-pagination {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 50px;
+    }
+
+    .page-btn {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: white;
+      color: #1e2c3a;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid #e9ecef;
+    }
+
+    .page-btn:hover,
+    .page-btn.active {
+      background: #0d6efd;
+      border-color: #0d6efd;
+      color: white;
+    }
+
+    /* Card Stats */
+    .news-stats {
+      display: flex;
+      gap: 15px;
+      padding-top: 15px;
+      margin-top: 15px;
+      border-top: 1px solid #f0f0f0;
+    }
+
+    .stat-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      color: #6c757d;
+      font-size: 0.8rem;
+    }
+
+    .stat-item i {
+      color: #0d6efd;
+    }
+
+    /* Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .news-box-card {
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .news-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .news-box-card.featured {
+        grid-column: span 1;
+      }
+      
+      .news-filter-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      
+      .search-box {
+        width: 100%;
+      }
+      
+      .search-box input {
+        width: 100%;
+      }
+      
+      .filter-buttons {
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <script src="assets/js/components.js"></script>
+  <script>phpc.topbar()</script>
+
+  <script>phpc.header()</script>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h2>News & Updates</h2>
+      <h3 style="color:white;text-shadow: 2px 2px 2px rgb(2, 2, 110)">Stay informed with PHPC's latest achievements and community initiatives</h3>
+    </div>
+    <div class="hero-slider swiper-container">
+      <div class="swiper-wrapper">
+      <div class="swiper-slide" style="background-image: url('assets/img/newss.jpg'); background-size: cover; background-position: center;"></div>
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+    <div id="about">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header" data-aos="fade-up">
+          <h2>Latest News</h2>
+          <p style="color: #6c757d; margin-top: 15px;">Discover our milestones, safety achievements, and community outreach programs</p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="news-filter-bar" data-aos="fade-up" data-aos-delay="100">
+          <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All News</button>
+            <button class="filter-btn" data-filter="safety">Safety Milestones</button>
+            <button class="filter-btn" data-filter="csr">CSR Activities</button>
+            <button class="filter-btn" data-filter="company">Company Updates</button>
+          </div>
+          <div class="search-box">
+            <input type="text" id="newsSearchInput" placeholder="Search news...">
+            <button id="searchBtn"><i class="bi bi-search"></i></button>
+          </div>
+        </div>
+
+        <!-- Results Counter -->
+        <div class="results-counter" data-aos="fade-up">
+          Showing <span id="resultCount">15</span> articles
+        </div>
+
+        <!-- News Grid - Box Style -->
+        <div class="news-grid" id="newsGrid">
+          
+          <!-- 17th National Excellence Award -->
+          <div class="news-box-card featured" data-category="company" data-aos="fade-up" data-aos-delay="150">
+            <div class="news-image-wrapper" style="height: 240px;">
+              <span class="news-category category-company">Company Achievement</span>
+              <img src="./assets/img/17national-excellence.jpg" alt="17th National Excellence Award">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> April 24, 2026</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 4 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="./17national-excellence.html">PHPC Receives 17th National Excellence Award</a>
+              </h2>
+              <p class="news-excerpt">
+                PHPC Co., Ltd. Inc. is honored with the prestigious 17th National Excellence Award, a remarkable recognition of the company's unwavering commitment to quality, innovation, and outstanding service in the electro-mechanical construction industry. This distinguished award celebrates PHPC's continued dedication to delivering world-class engineering and construction solutions across the Philippines, highlighting its role as one of the leading electro-mechanical contractors in the country. The award ceremony brought together industry leaders, government officials, and partners who have collaborated with PHPC over the years, further strengthening the company's position as a trusted partner for industrial and commercial projects nationwide.
+              </p>
+              <a href="./17national-excellence.html" class="read-more-btn">
+                Read Full Story <i class="bi bi-arrow-right"></i>
+              </a>
+              <div class="news-stats">
+                <span class="stat-item"><i class="bi bi-eye"></i> 1.5k views</span>
+                <span class="stat-item"><i class="bi bi-share"></i> 62 shares</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Featured Article - 12M Safety -->
+          <div class="news-box-card" data-category="safety" data-aos="fade-up" data-aos-duration="1000">
+            <div class="news-image-wrapper">
+              <span class="news-category category-safety">Safety Milestone</span>
+              <img src="./assets/img/12-mil.jpg" alt="12M Safety Achievement">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> December 18, 2025</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 3 min read</span>
+              </div>
+              <h2 class="news-title-box">
+<a href="12MSafetyManHours.html">Record-Breaking Achievement: 12 Million Safe Man-Hours</a>
+              </h2>
+              <p class="news-excerpt">
+                PHPC Co., Ltd., Inc., a proud member of the KANDENKO Group, celebrates its most significant safety milestone yet — achieving 12 million safe man-hours at the Satellite Office, Meridian Industrial Complex in Sta. Rosa, Laguna. This remarkable accomplishment underscores the company's unwavering dedication to workplace safety, operational excellence, and the well-being of every team member.
+              </p>
+<a href="12MSafetyManHours.html" class="read-more-btn">
+                Read Full Story <i class="bi bi-arrow-right"></i>
+              </a>
+              <div class="news-stats">
+                <span class="stat-item"><i class="bi bi-eye"></i> 2.1k views</span>
+                <span class="stat-item"><i class="bi bi-share"></i> 87 shares</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11M Safety -->
+          <div class="news-box-card" data-category="safety" data-aos="fade-up" data-aos-delay="100">
+            <div class="news-image-wrapper">
+              <span class="news-category category-safety">Safety Milestone</span>
+              <img src="./assets/img/11M tarp.png" alt="11M Safety Achievement">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> October 26, 2025</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 3 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="11MSafetyManHours.html">Historic Achievement: 11 Million Safe Man-Hours</a>
+              </h2>
+              <p class="news-excerpt">
+                PHPC Co., Ltd., Inc. proudly celebrates the achievement of 11 million safe man-hours, marking another significant milestone in the company's commitment to safety excellence and workplace protection.
+              </p>
+              <a href="./CorporateSocialResponsibility9.html" class="read-more-btn">
+                Read Full Story <i class="bi bi-arrow-right"></i>
+              </a>
+              <div class="news-stats">
+                <span class="stat-item"><i class="bi bi-eye"></i> 1.2k views</span>
+                <span class="stat-item"><i class="bi bi-share"></i> 45 shares</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10M Safety -->
+          <div class="news-box-card" data-category="safety" data-aos="fade-up" data-aos-delay="200">
+            <div class="news-image-wrapper">
+              <span class="news-category category-safety">Safety Milestone</span>
+              <img src="./assets/img/10-M-SafetyHours.png" alt="10M Safety">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> September 28, 2025</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 3 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="10MSafetyManHours.html">10 Million Safe Man-Hours Achieved</a>
+              </h2>
+              <p class="news-excerpt">
+                Another remarkable milestone demonstrating PHPC's unwavering commitment to safety excellence despite daily challenges.
+              </p>
+              <a href="./CorporateSocialResponsibility8.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 9M Safety -->
+          <div class="news-box-card" data-category="safety" data-aos="fade-up" data-aos-delay="300">
+            <div class="news-image-wrapper">
+              <span class="news-category category-safety">Safety Milestone</span>
+              <img src="./assets/img/9M PHPC 2x3 (1).png" alt="9M Safety">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> December 28, 2024</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 2 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="9MSafetyManHours.html">9 Million Safe Man-Hours Milestone</a>
+              </h2>
+              <p class="news-excerpt">
+                PHPC celebrates 9 million safe man-hours, reflecting excellent safety performance across all operations.
+              </p>
+              <a href="./CorporateSocialResponsibility7.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- CSR Marinduque -->
+          <div class="news-box-card" data-category="csr" data-aos="fade-up" data-aos-delay="400">
+            <div class="news-image-wrapper">
+              <span class="news-category category-csr">CSR Activity</span>
+              <img src="./assets/img/marinduque.png" alt="Marinduque CSR">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> June 18, 2021</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 4 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="./CorporateSocialResponsibility5.html">CSR: Supporting Marinduque Academy</a>
+              </h2>
+              <p class="news-excerpt">
+                Despite the pandemic, PHPC continues its commitment to community support through educational initiatives.
+              </p>
+              <a href="./CorporateSocialResponsibility5.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 8M Safety -->
+          <div class="news-box-card" data-category="safety" data-aos="fade-up" data-aos-delay="500">
+            <div class="news-image-wrapper">
+              <span class="news-category category-safety">Safety Milestone</span>
+              <img src="./assets/img/8-M-SafetyHours.png" alt="8M Safety">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> November 28, 2023</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 3 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="8MSafetyManHours.html">8 Million Safe Man-Hours</a>
+              </h2>
+              <p class="news-excerpt">
+                PHPC's safety culture continues to deliver outstanding results with 8 million safe man-hours.
+              </p>
+              <a href="./CorporateSocialResponsibility6.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- CSR Langkaan -->
+          <div class="news-box-card" data-category="csr" data-aos="fade-up" data-aos-delay="600">
+            <div class="news-image-wrapper">
+              <span class="news-category category-csr">CSR Activity</span>
+              <img src="./assets/img/news/article4/langkaan.png" alt="Langkaan CSR">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> June 10, 2021</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 3 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="./CorporateSocialResponsibility4.html">Langkaan Elementary School Outreach</a>
+              </h2>
+              <p class="news-excerpt">
+                PHPC executives execute supportive actions to help Filipino citizens during challenging times.
+              </p>
+              <a href="./CorporateSocialResponsibility4.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 7M Safety -->
+          <div class="news-box-card" data-category="safety" data-aos="fade-up" data-aos-delay="700">
+            <div class="news-image-wrapper">
+              <span class="news-category category-safety">Safety Milestone</span>
+              <img src="./assets/img/7-M-SafetyHours.png" alt="7M Safety">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> November 28, 2023</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 2 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="7MSafetyManHours.html">7 Million Safe Man-Hours</a>
+              </h2>
+              <p class="news-excerpt">
+                Another testament to PHPC's discipline and dedication to protecting its workforce.
+              </p>
+              <a href="./CorporateSocialResponsibility6.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 6M Safety -->
+          <div class="news-box-card" data-category="safety" data-aos="fade-up" data-aos-delay="800">
+            <div class="news-image-wrapper">
+              <span class="news-category category-safety">Safety Milestone</span>
+              <img src="./assets/img/6-M-SafetyHours.jpg" alt="6M Safety">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> Nov 26, 2021</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 3 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="./CorporateSocialResponsibility5.html">6 Million Safe Man-Hours</a>
+              </h2>
+              <p class="news-excerpt">
+                PHPC celebrates 6 million safe man-hours in Meridian Project, showcasing excellent safety management.
+              </p>
+              <a href="./CorporateSocialResponsibility5.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- CSR Lumil -->
+          <div class="news-box-card" data-category="csr" data-aos="fade-up" data-aos-delay="900">
+            <div class="news-image-wrapper">
+              <span class="news-category category-csr">CSR Activity</span>
+              <img src="./assets/img/news/article3/lumil.jpg" alt="Lumil CSR">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> May 26, 2021</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 3 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="./CorporateSocialResponsibility1.html">Lumil Integrated NHS Support</a>
+              </h2>
+              <p class="news-excerpt">
+                Continuing CSR initiatives to support education during the pandemic period.
+              </p>
+              <a href="./CorporateSocialResponsibility3.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- CSR Hoyo -->
+          <div class="news-box-card" data-category="csr" data-aos="fade-up" data-aos-delay="1000">
+            <div class="news-image-wrapper">
+              <span class="news-category category-csr">CSR Activity</span>
+              <img src="./assets/img/news/article2/hoyo.jpg" alt="Hoyo CSR">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> May 26, 2021</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 3 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="./CorporateSocialResponsibility2.html">Hoyo Elementary School Outreach</a>
+              </h2>
+              <p class="news-excerpt">
+                PHPC's commitment to community development through educational support programs.
+              </p>
+              <a href="./CorporateSocialResponsibility2.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- CSR Sta Monica -->
+          <div class="news-box-card" data-category="csr" data-aos="fade-up" data-aos-delay="1100">
+            <div class="news-image-wrapper">
+              <span class="news-category category-csr">CSR Activity</span>
+              <img src="./assets/img/news/article1/a1.jpg" alt="Sta Monica CSR">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> April 06, 2021</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 4 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="./CorporateSocialResponsibility1.html">Sta. Monica Elementary School Initiative</a>
+              </h2>
+              <p class="news-excerpt">
+                Launching PHPC's CSR activities with support for Sta. Monica Elementary School during pandemic.
+              </p>
+              <a href="./CorporateSocialResponsibility1.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5M Safety -->
+          <div class="news-box-card" data-category="safety" data-aos="fade-up" data-aos-delay="1200">
+            <div class="news-image-wrapper">
+              <span class="news-category category-safety">Safety Milestone</span>
+              <img src="./assets/img/manhour.png" alt="5M Safety">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> Nov 27, 2020</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 2 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="./CorporateSocialResponsibility5.html">5 Million Safe Man-Hours</a>
+              </h2>
+              <p class="news-excerpt">
+                PHPC celebrates achieving 5 million safe man-hours, a significant safety milestone.
+              </p>
+              <a href="./CorporateSocialResponsibility5.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- 7M Historical -->
+          <div class="news-box-card" data-category="safety" data-aos="fade-up" data-aos-delay="1300">
+            <div class="news-image-wrapper">
+              <span class="news-category category-safety">Safety Milestone</span>
+              <img src="./assets/img/7-M-SafetyHours.png" alt="7M Safety Historical">
+            </div>
+            <div class="news-content">
+              <div class="news-meta-box">
+                <span class="news-date"><i class="bi bi-calendar3"></i> November 28, 2011</span>
+                <span class="read-time"><i class="bi bi-clock"></i> 2 min read</span>
+              </div>
+              <h2 class="news-title-box">
+                <a href="7MSafetyManHours.html">7 Million Safe Man-Hours (Meridian Project)</a>
+              </h2>
+              <p class="news-excerpt">
+                Historical milestone: PHPC achieves 6 million safe man-hours in Meridian Project site.
+              </p>
+              <a href="./CorporateSocialResponsibility6.html" class="read-more-btn">
+                Read More <i class="bi bi-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+        </div><!-- End News Grid -->
+
+        <!-- Pagination -->
+        <div class="news-pagination" data-aos="fade-up">
+          <a href="#" class="page-btn active">1</a>
+          <a href="#" class="page-btn">2</a>
+          <a href="#" class="page-btn">3</a>
+          <a href="#" class="page-btn"><i class="bi bi-chevron-right"></i></a>
+        </div>
+
+      </div><!-- End Container -->
+    </div><!-- End About -->
+  </main><!-- End #main -->
+
+  <script>phpc.footer()</script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Working Filter System -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const newsGrid = document.getElementById('newsGrid');
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const searchInput = document.getElementById('newsSearchInput');
+      const searchBtn = document.getElementById('searchBtn');
+      const resultCountSpan = document.getElementById('resultCount');
+      
+      let currentFilter = 'all';
+      let currentSearchTerm = '';
+
+      // Get all news cards
+      const newsCards = Array.from(document.querySelectorAll('.news-box-card'));
+
+      // Function to filter and search cards
+      function filterAndSearch() {
+        let visibleCount = 0;
+        
+        newsCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const title = card.querySelector('.news-title-box')?.textContent.toLowerCase() || '';
+          const excerpt = card.querySelector('.news-excerpt')?.textContent.toLowerCase() || '';
+          const searchContent = title + ' ' + excerpt;
+          
+          // Check category filter
+          const categoryMatch = currentFilter === 'all' || category === currentFilter;
+          
+          // Check search term
+          const searchMatch = !currentSearchTerm || searchContent.includes(currentSearchTerm.toLowerCase());
+          
+          // Show/hide based on both conditions
+          if (categoryMatch && searchMatch) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Update result count
+        if (resultCountSpan) {
+          resultCountSpan.textContent = visibleCount;
+        }
+
+        // Show no results message if needed
+        handleNoResults(visibleCount);
+      }
+
+      // Handle no results display
+      function handleNoResults(visibleCount) {
+        const existingNoResults = document.querySelector('.no-results');
+        
+        if (visibleCount === 0) {
+          if (!existingNoResults) {
+            const noResultsDiv = document.createElement('div');
+            noResultsDiv.className = 'no-results';
+            noResultsDiv.innerHTML = `
+              <i class="bi bi-search"></i>
+              <h3>No articles found</h3>
+              <p>Try adjusting your filters or search terms</p>
+              <button class="reset-search-btn" onclick="resetAllFilters()">
+                <i class="bi bi-arrow-repeat"></i> Reset All Filters
+              </button>
+            `;
+            newsGrid.appendChild(noResultsDiv);
+          }
+        } else {
+          if (existingNoResults) {
+            existingNoResults.remove();
+          }
+        }
+      }
+
+      // Filter button click handlers
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          // Update active state
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Update filter
+          currentFilter = this.getAttribute('data-filter');
+          
+          // Apply filters
+          filterAndSearch();
+        });
+      });
+
+      // Search functionality
+      function performSearch() {
+        currentSearchTerm = searchInput.value.trim();
+        filterAndSearch();
+      }
+
+      searchBtn.addEventListener('click', performSearch);
+      
+      searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          performSearch();
+        }
+      });
+
+      // Global reset function
+      window.resetAllFilters = function() {
+        // Reset filter buttons
+        filterBtns.forEach(btn => {
+          btn.classList.remove('active');
+          if (btn.getAttribute('data-filter') === 'all') {
+            btn.classList.add('active');
+          }
+        });
+        
+        // Reset variables
+        currentFilter = 'all';
+        currentSearchTerm = '';
+        
+        // Clear search input
+        if (searchInput) {
+          searchInput.value = '';
+        }
+        
+        // Show all cards
+        filterAndSearch();
+      };
+
+      // Initialize - show all cards and set count
+      filterAndSearch();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>PHPC Co., Ltd. Inc | Building a Better Tomorrow</title>
+  <meta name="author" content="PHPCCoLtdInc">
+  <meta name="google-site-verification" content="6ZyzHb-FF93LxDwwfposxA7IaeHVKXi2dI7LThm3AtU" />
+  <meta name="description" content="PHPC Co., Ltd. Inc., is a member of KanDenKo Group with its principal headquarters located in Tokyo, Japan. Considered to be one of the leading electro-mechanical contractors in the Philippines.">
+  <meta name="keywords" content="construction companies philippines,Contractor Philippines,General Contractor Philippines,Electrical Contractor Philippines,Mechanical Contractor Philippines">
+  <meta name="robots" content="">
+  
+  <!-- Favicons -->
+  <link href="assets/img/kan.ico" rel="icon">
+  
+  <!-- Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://forms.office.com" crossorigin>
+
+  <!-- Preload critical hero images -->
+  <link rel="preload" as="image" href="./assets/img/kandenko234.png" fetchpriority="high">
+  <link rel="preload" as="image" href="./assets/img/kandenko1.jpg" fetchpriority="high">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet"></noscript>
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.min.css">
+  <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.css">
+  
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  
+  <style>
+    /* Modern, clean remake */
+    :root {
+      --primary: #0a2f6c;
+      --primary-dark: #072247;
+      --primary-light: #1e4a8b;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+    }
+    
+    body {
+      font-family: 'Open Sans', sans-serif;
+      color: var(--gray-800);
+    }
+    
+    /* Hero Section - Modern remake */
+    #hero {
+      position: relative;
+      height: 90vh;
+      min-height: 600px;
+    }
+    .hero-content {
+      position: absolute;
+      bottom: 15%;
+      left: 8%;
+      z-index: 10;
+      max-width: 650px;
+    }
+    .hero-content h2 {
+      color: #fff;
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-shadow: 2px 4px 20px rgba(0,0,0,0.3);
+      margin-bottom: 10px;
+      animation: fadeInUp 0.8s ease;
+    }
+    .hero-content h3 {
+      color: #fff;
+      font-size: 1.5rem;
+      text-shadow: 1px 2px 10px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+      font-weight: 500;
+      animation: fadeInUp 1s ease;
+    }
+    .btn-get-started {
+      background: var(--primary);
+      color: #fff;
+      padding: 14px 40px;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      text-decoration: none;
+      display: inline-block;
+      border: 2px solid rgba(255,255,255,0.2);
+      transition: all 0.3s ease;
+      animation: fadeInUp 1.2s ease;
+    }
+    .btn-get-started:hover {
+      background: #fff;
+      color: var(--primary);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    }
+    
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Why Choose Us - Modern remake */
+    #why-us {
+      padding: 80px 0;
+      background: #fff;
+    }
+    .why-us-content {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 45px 35px;
+      border-radius: 20px;
+      height: 100%;
+      color: #fff;
+      box-shadow: 0 20px 40px rgba(10, 47, 108, 0.15);
+    }
+    .why-us-content h3 {
+      font-weight: 700;
+      margin-bottom: 25px;
+      font-size: 2rem;
+    }
+    .why-us-content p {
+      line-height: 1.8;
+      opacity: 0.95;
+      margin-bottom: 30px;
+    }
+    .more-btn {
+      background: transparent;
+      border: 2px solid #fff;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      transition: all 0.3s;
+    }
+    .more-btn:hover {
+      background: #fff;
+      color: var(--primary);
+    }
+    
+    .service-icon-box {
+      background: #fff;
+      padding: 35px 25px;
+      border-radius: 16px;
+      height: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: all 0.3s ease;
+      border: 1px solid var(--gray-200);
+    }
+    .service-icon-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(10, 47, 108, 0.12);
+      border-color: var(--primary);
+    }
+    .service-icon-box i {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+    }
+    .service-icon-box h4 {
+      font-weight: 700;
+      margin-bottom: 15px;
+      color: var(--gray-800);
+    }
+    .service-icon-box p {
+      color: var(--gray-600);
+      line-height: 1.7;
+      font-size: 0.95rem;
+    }
+    
+    /* Who We Work For - Modern remake */
+    .who-we-work-for {
+      padding: 80px 0;
+      background: var(--gray-50);
+    }
+    .who-we-work-for .image-wrapper {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    .who-we-work-for .image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .who-we-work-for .image-wrapper:hover img {
+      transform: scale(1.05);
+    }
+    .who-we-work-for h1 {
+      color: var(--primary);
+      font-weight: 700;
+      margin-bottom: 25px;
+      font-size: 2.5rem;
+      position: relative;
+      padding-bottom: 15px;
+    }
+    .who-we-work-for h1::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 2px;
+    }
+    .who-we-work-for p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: var(--gray-700);
+      margin-bottom: 20px;
+    }
+    .who-we-work-for .divider {
+      border: none;
+      height: 1px;
+      background: linear-gradient(90deg, var(--primary) 0%, var(--gray-200) 100%);
+      margin: 30px 0 25px 0;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+    }
+    .feature-item {
+      background: #fff;
+      padding: 18px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+      border-left: 4px solid var(--primary);
+      transition: all 0.2s ease;
+    }
+    .feature-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 6px 16px rgba(10, 47, 108, 0.1);
+    }
+    .feature-item::before {
+      content: "▹";
+      margin-right: 12px;
+      color: var(--primary);
+      font-size: 1.3rem;
+    }
+    
+    /* Accomplishments - Modern remake */
+    #call-to-action {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+      padding: 70px 0;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    #call-to-action::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 400px;
+      height: 400px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 50%;
+    }
+    #call-to-action::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      left: -5%;
+      width: 300px;
+      height: 300px;
+      background: rgba(255,255,255,0.03);
+      border-radius: 50%;
+    }
+    .cta-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 50px;
+      position: relative;
+      z-index: 1;
+    }
+    .stat-card {
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+    .stat-card h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    }
+    .stat-card p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      font-weight: 500;
+    }
+    
+    /* What We Offer - Modern remake */
+    #services {
+      padding: 80px 0;
+      background: #fff;
+    }
+    .section-header {
+      margin-bottom: 50px;
+    }
+    .section-header h2 {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+    .section-header p {
+      color: var(--gray-600);
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .offer-card {
+      background: #fff;
+      padding: 35px 25px;
+      border-radius: 20px;
+      height: 100%;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s ease;
+    }
+    .offer-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(10, 47, 108, 0.12);
+      border-color: var(--primary);
+    }
+    .offer-card .icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 25px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .offer-card .icon i {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+    .offer-card .title {
+      margin-bottom: 15px;
+    }
+    .offer-card .title a {
+      color: var(--gray-800);
+      font-weight: 700;
+      font-size: 1.3rem;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .offer-card .title a:hover {
+      color: var(--primary);
+    }
+    .offer-card .description {
+      color: var(--gray-600);
+      line-height: 1.7;
+    }
+    
+    /* Services & Inquiry - Modern remake */
+    .services-inquiry {
+      padding: 80px 0;
+      background: var(--gray-50);
+    }
+    .services-inquiry h4 {
+      color: var(--primary);
+      font-weight: 700;
+      font-size: 2rem;
+      margin-bottom: 25px;
+    }
+    .services-inquiry p {
+      color: var(--gray-700);
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+    .service-category {
+      margin-bottom: 30px;
+    }
+    .service-category > strong {
+      color: var(--primary);
+      font-size: 1.2rem;
+      display: block;
+      margin-bottom: 15px;
+    }
+    .service-category ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .service-category ul li {
+      padding: 8px 0;
+      padding-left: 25px;
+      position: relative;
+      color: var(--gray-700);
+    }
+    .service-category ul li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--primary);
+      font-weight: bold;
+    }
+    .service-category .view-all {
+      display: inline-block;
+      margin-top: 15px;
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+    .service-category .view-all:hover {
+      transform: translateX(5px);
+      text-decoration: underline;
+    }
+    .inquiry-box {
+      background: #fff;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    }
+    .inquiry-box h4 {
+      margin-bottom: 10px;
+    }
+    .inquiry-box h3 {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+    .inquiry-box iframe {
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-content h2 {
+        font-size: 2.2rem;
+      }
+      .hero-content h3 {
+        font-size: 1.1rem;
+      }
+      .who-we-work-for .image-wrapper {
+        margin-bottom: 30px;
+      }
+      .who-we-work-for h1 {
+        font-size: 2rem;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      .stat-card h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <script src="assets/js/components.js"></script>
+  <script>phpc.topbar()</script>
+
+  <script>phpc.header()</script>
+
+  <!-- ======= Hero Section - REMADE ======= -->
+  <section id="hero">
+    <div class="hero-content" data-aos="fade-up">
+      <h2>PHPC Co., Ltd. Inc.</h2>
+      <h3 style="color:white;text-shadow: 2px 2px 2px rgb(2, 2, 110)"><b>Building A Better Tomorrow, Today</b></h3>
+      <div id="indexButton">
+        <a href="contact.html" class="btn-get-started scrollto">Contact Us</a>
+      </div>
+    </div>
+    <div class="hero-slider swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('./assets/img/kandenko234.png');"></div>
+        <div class="swiper-slide" style="background-image: url('./assets/img/kandenko1.jpg');"></div>
+      </div>
+    </div>
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Why Choose Us - REMADE ======= -->
+    <section id="why-us">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 d-flex align-items-stretch">
+            <div class="why-us-content">
+              <h3>Why Choose Us</h3>
+              <p>
+                PHPC Co., Ltd. Inc. is a distinguished electro-mechanical contracting firm in the Philippines, trusted for its expertise and reliability. Our team consists of skilled professionals who excel in understanding and meeting our clients' needs.
+              </p>
+              <div>
+                <a href="#" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-stretch">
+            <div class="row w-100 m-0">
+              <div class="col-md-4 d-flex align-items-stretch px-2">
+                <div class="service-icon-box mt-3 mt-md-0">
+                  <i class="bx bx-cog"></i>
+                  <h4>Mechanical Works</h4>
+                  <p>Airconditioning, Mechanical Ventilation, Plumbing, Sanitary, Fire Protection, Clean rooms</p>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex align-items-stretch px-2">
+                <div class="service-icon-box mt-3 mt-md-0">
+                  <i class="bx bx-bulb"></i>
+                  <h4>Electrical Works</h4>
+                  <p>Substation, High Voltage-Switchgear, Panel Boards, Lightning & Power, Fire Alarm System, Tel/LAN System</p>
+                </div>
+              </div>
+              <div class="col-md-4 d-flex align-items-stretch px-2">
+                <div class="service-icon-box mt-3 mt-md-0">
+                  <i class="bx bx-bar-chart-alt"></i>
+                  <h4>Structural Steel Works</h4>
+                  <p>Planning, designing, fabrication of steel platforms, generator house, structural plant warehouse</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Who We Work For - REMADE ======= -->
+    <section class="who-we-work-for">
+      <div class="container" data-aos="fade-up">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="image-wrapper">
+              <img src="./assets/img/whowework.png" alt="Who we work for" loading="lazy" decoding="async" width="600" height="400">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <h1>Who We Work For</h1>
+            <p>We work alongside with clients who needs our services related to Industrial and Commercial projects.</p>
+            <p>Completing project after project, year after year, KanDenKo's brand equity of quality, reliability, safety, on time delivery and care for the environment has helped PHPC and its clients in fulfilling the vision of Building A Better Tomorrow, Today.</p>
+            
+            <hr class="divider">
+            
+            <div class="feature-grid">
+              <div class="feature-item">High Quality Service</div>
+              <div class="feature-item">Good Client Relations</div>
+              <div class="feature-item">Licensed and Insured</div>
+              <div class="feature-item">Extensive Experience</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Accomplishments - REMADE ======= -->
+    <section id="call-to-action">
+      <div class="container" data-aos="zoom-out">
+        <h3 class="cta-title" align="center">Our Accomplishments</h3>
+        <div class="row" align="center">
+          <div class="col-lg-3 col-sm-6 col-md-6">
+            <div class="stat-card">
+              <h1>30</h1>
+              <p>Years of Experience</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-md-6">
+            <div class="stat-card">
+              <h1>152</h1>
+              <p>Completed Projects</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-md-6">
+            <div class="stat-card">
+              <h1>38</h1>
+              <p>Active Projects</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6 col-md-6">
+            <div class="stat-card">
+              <h1>190</h1>
+              <p>Total</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= What We Offer - REMADE ======= -->
+    <section id="services">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2 align="center">What We Offer</h2>
+          <p align="center">As an integrated engineering company, we can offer our clients with a full range of service from conceptual designs to turnkey projects.</p>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="offer-card">
+              <div class="icon"><i class="bi bi-pencil-square"></i></div>
+              <h4 class="title"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=GGLo_Q3YwUWlbZMX4jWdtH67tSxH_jFJvr0BldI-5QNUMFJKM04zQVlET0c0RVQ4UFpDMk5RVkkwVi4u">Consultancy</a></h4>
+              <p class="description">Consult from us and receive advises that can make your project plans better, in high quality and safe.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <div class="offer-card">
+              <div class="icon"><i class="bi bi-card-checklist"></i></div>
+              <h4 class="title"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=GGLo_Q3YwUWlbZMX4jWdtH67tSxH_jFJvr0BldI-5QNUMFJKM04zQVlET0c0RVQ4UFpDMk5RVkkwVi4u">Planning</a></h4>
+              <p class="description">Our professionals can conduct and propose project plans that apply to your desired project.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+            <div class="offer-card">
+              <div class="icon"><i class="bi bi-house"></i></div>
+              <h4 class="title"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=GGLo_Q3YwUWlbZMX4jWdtH67tSxH_jFJvr0BldI-5QNUMFJKM04zQVlET0c0RVQ4UFpDMk5RVkkwVi4u">Building</a></h4>
+              <p class="description">Our Labourers are well-trained and do actual work with the guide of ISO Standards.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="400">
+            <div class="offer-card">
+              <div class="icon"><i class="bi bi-people"></i></div>
+              <h4 class="title"><a href="https://forms.office.com/Pages/ResponsePage.aspx?id=GGLo_Q3YwUWlbZMX4jWdtH67tSxH_jFJvr0BldI-5QNUMFJKM04zQVlET0c0RVQ4UFpDMk5RVkkwVi4u">Project Management</a></h4>
+              <p class="description">You can hire us to maintain and manage your project site.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Our Services & Inquiry - REMADE ======= -->
+    <section class="services-inquiry">
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-6">
+            <h4>Our Services</h4>
+            <p>Completing project after project, year after year, KanDenKo's brand equity of quality, reliability, safety, on time delivery and care for the environment has helped PHPC and its clients in fulfilling the vision of Building A Better Tomorrow, Today.</p>
+            
+            <div class="service-category">
+              <strong>Building Engineering and Construction</strong>
+              <ul>
+                <li>Air conditioning and Mechanical Ventilating System (ACMV)</li>
+                <li>Electrical System</li>
+                <li>Building Automation and Energy Management System</li>
+              </ul>
+              <a href="./services.html" class="view-all">View All →</a>
+            </div>
+            
+            <div class="service-category">
+              <strong>Plant Engineering and Construction</strong>
+              <ul>
+                <li>Clean Rooms and Bio Clean Rooms</li>
+                <li>Secondary Works for Production Machine</li>
+                <li>Utilities System</li>
+              </ul>
+              <a href="./services.html" class="view-all">View All →</a>
+            </div>
+          </div>
+          
+          <div class="col-lg-6">
+            <div class="inquiry-box">
+              <h4>For more Inquiries</h4>
+              <h3>Please enter the details requested below and we shall contact you within one business day.</h3>
+              <iframe width="100%" height="450" src="https://forms.office.com/Pages/ResponsePage.aspx?id=GGLo_Q3YwUWlbZMX4jWdtH67tSxH_jFJvr0BldI-5QNUMFJKM04zQVlET0c0RVQ4UFpDMk5RVkkwVi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%;" allowfullscreen loading="lazy" title="Contact Form"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <script>phpc.footer()</script>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>

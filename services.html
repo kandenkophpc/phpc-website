@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PHPC Co., Ltd. Inc</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <meta name="robots" content="noindex,nofollow"> 
+  <!-- Favicons -->
+  <link href="assets/img/kan.ico" rel="icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Engineering Service Cards Style -->
+  <style>
+    /* Engineering/Industrial Design for Service Cards */
+    :root {
+      --eng-navy: #0a1929;
+      --eng-blue: #1e3a5f;
+      --eng-gray: #4a5568;
+      --eng-orange: #ed8936;
+      --eng-yellow: #ecc94b;
+      --eng-cyan: #00b4d8;
+      --eng-border: #cbd5e1;
+    }
+
+    /* Section Headers - Engineering Style */
+    #about h2 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      color: var(--eng-navy);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 12px;
+      margin-bottom: 25px;
+    }
+
+    #about h2:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--eng-blue), var(--eng-orange));
+    }
+
+    #about h2:after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 35px;
+      height: 2px;
+      background: var(--eng-yellow);
+    }
+
+    #about h3 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--eng-gray);
+      border-left: 3px solid var(--eng-orange);
+      padding-left: 25px;
+      margin: 20px 0 30px 0;
+      font-weight: 400;
+    }
+
+    /* Engineering Service Card */
+    .engineering-card {
+      position: relative;
+      background: white;
+      border: 1px solid var(--eng-border);
+      border-radius: 4px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      height: 100%;
+      min-height: 350px !important;
+    }
+
+    .engineering-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 20px -5px rgba(0, 0, 0, 0.15);
+      border-color: var(--eng-blue);
+    }
+
+    /* Blueprint corner accent */
+    .engineering-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 35px 35px 0 0;
+      border-color: var(--eng-cyan) transparent transparent transparent;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 2;
+    }
+
+    .engineering-card:hover::before {
+      opacity: 0.08;
+    }
+
+    /* Image wrapper with grid overlay */
+    .card-img-wrapper {
+      position: relative;
+      overflow: hidden;
+      height: 200px;
+    }
+
+    .card-img-wrapper::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        linear-gradient(rgba(30, 58, 95, 0.08) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(30, 58, 95, 0.08) 1px, transparent 1px);
+      background-size: 20px 20px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .engineering-card:hover .card-img-wrapper::after {
+      opacity: 1;
+    }
+
+    .engineering-card .card-img-top {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .engineering-card:hover .card-img-top {
+      transform: scale(1.06);
+    }
+
+    /* Card content */
+    .engineering-card .card-body {
+      padding: 20px 18px;
+      background: linear-gradient(to bottom, #ffffff, #f8fafc);
+      border-top: 1px solid var(--eng-border);
+      position: relative;
+    }
+
+    .engineering-card .card-body::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 15px;
+      right: 15px;
+      height: 1px;
+      background: repeating-linear-gradient(90deg, 
+        var(--eng-blue) 0px, 
+        var(--eng-blue) 3px, 
+        transparent 3px, 
+        transparent 6px);
+    }
+
+    .engineering-card .card-title {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--eng-navy);
+      margin-bottom: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      display: flex;
+      align-items: center;
+    }
+
+    .engineering-card .card-title i {
+      color: var(--eng-orange);
+      margin-right: 10px;
+      font-size: 1.1rem;
+    }
+
+    /* Tech specs list */
+    .tech-specs {
+      margin: 15px 0 12px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tech-specs li {
+      font-size: 0.8rem;
+      color: var(--eng-gray);
+      padding: 4px 0;
+      border-bottom: 1px dashed #e2e8f0;
+      display: flex;
+      align-items: center;
+    }
+
+    .tech-specs li:last-child {
+      border-bottom: none;
+    }
+
+    .tech-specs li i {
+      color: #38a169;
+      margin-right: 8px;
+      font-size: 0.7rem;
+    }
+
+    .spec-label {
+      font-weight: 600;
+      color: var(--eng-blue);
+      min-width: 80px;
+      display: inline-block;
+      font-size: 0.75rem;
+    }
+
+    /* Service summary */
+    .service-summary {
+      font-size: 0.85rem;
+      color: var(--eng-gray);
+      margin: 12px 0 10px;
+      line-height: 1.6;
+      padding: 8px 0;
+      border-top: 1px solid #e2e8f0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    /* Engineering link */
+    .eng-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 0;
+      color: var(--eng-blue);
+      font-weight: 600;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      text-decoration: none;
+      border-bottom: 1.5px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .eng-link i {
+      margin-left: 5px;
+      font-size: 0.7rem;
+      transition: transform 0.2s ease;
+    }
+
+    .eng-link:hover {
+      color: var(--eng-orange);
+      border-bottom-color: var(--eng-orange);
+    }
+
+    .eng-link:hover i {
+      transform: translateX(3px);
+    }
+
+    /* Technical divider */
+    .tech-divider {
+      height: 2px;
+      background: repeating-linear-gradient(90deg, 
+        var(--eng-blue) 0px, 
+        var(--eng-blue) 8px, 
+        transparent 8px, 
+        transparent 16px);
+      margin: 35px 0 20px;
+    }
+
+    /* Section spacing */
+    #about {
+      padding: 50px 0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .engineering-card {
+        margin-bottom: 20px;
+      }
+      
+      #about h2 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <script src="assets/js/components.js"></script>
+  <script>phpc.topbar()</script>
+
+  <script>phpc.header()</script>
+
+  <!-- ======= hero Section ======= -->
+  <section id="hero">
+
+    <div class="hero-content" data-aos="fade-up">
+      <h2>Our Services <span></span><br></h2>
+      <h3 style="color:white;text-shadow: 2px 2px 2px rgb(2, 2, 110)"><b>A wide range of services from design, commissioning to maintenance</b></h3>
+    </div>
+
+    <div class="hero-slider swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image: url('assets/img/hero-carousel/architect.png');"></div>
+      </div>
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Building Services Section ======= -->
+    <section id="about">
+      <div class="container" data-aos="">
+
+        <h2>Building Engineering and Construction</h2>
+        <h3>PHPC has many years of experience in providing a comprehensive range of building facilities. We have the expertise to handle design, installation and maintenance for offices and industrial plants.</h3>
+        
+        <div class="row" id="service1">
+          <!-- ACMV Card -->
+          <div class="col-lg-4">
+            <div class="engineering-card">
+              <div class="card-img-wrapper">
+                <img src="./assets/img/services/1a.jpg" class="card-img-top" alt="ACMV Systems">
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <i class="bi bi-thermometer-half"></i>
+                  Air Conditioning & Mechanical Ventilation
+                </div>
+                <ul class="tech-specs">
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Cooling:</span> Precision Climate Control</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Ventilation:</span> Mechanical & Natural</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Standard:</span> ASHRAE Compliant</li>
+                </ul>
+                <div class="service-summary">
+                  Complete HVAC solutions including chillers, AHUs, ducting and building management integration for optimal indoor air quality and energy efficiency.
+                </div>
+                <a href="#" class="eng-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Electrical Card -->
+          <div class="col-lg-4">
+            <div class="engineering-card">
+              <div class="card-img-wrapper">
+                <img src="./assets/img/services/1b.jpg" class="card-img-top" alt="Electrical Systems">
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <i class="bi bi-lightning-charge-fill"></i>
+                  Electrical System
+                </div>
+                <ul class="tech-specs">
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Power:</span> MV/LV Distribution</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Lighting:</span> LED & Smart Controls</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Backup:</span> UPS & Generators</li>
+                </ul>
+                <div class="service-summary">
+                  Comprehensive electrical infrastructure from main switchgear to final circuits, including emergency power systems and energy-efficient lighting solutions.
+                </div>
+                <a href="#" class="eng-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- BAS Card -->
+          <div class="col-lg-4">
+            <div class="engineering-card">
+              <div class="card-img-wrapper">
+                <img src="./assets/img/services/1c.jpg" class="card-img-top" alt="Building Automation">
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <i class="bi bi-cpu"></i>
+                  Building Automation & Energy Management
+                </div>
+                <ul class="tech-specs">
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Control:</span> DDC & PLC Systems</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Protocol:</span> BACnet/Modbus</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Energy:</span> LEED Optimization</li>
+                </ul>
+                <div class="service-summary">
+                  Intelligent building management systems for HVAC, lighting, security, and energy monitoring to optimize performance and reduce operational costs.
+                </div>
+                <a href="#" class="eng-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <br>
+        
+        <div class="row" id="service1">
+          <!-- Fire Protection Card -->
+          <div class="col-lg-4">
+            <div class="engineering-card">
+              <div class="card-img-wrapper">
+                <img src="./assets/img/services/1d.jpg" class="card-img-top" alt="Fire Protection">
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <i class="bi bi-shield-fill"></i>
+                  Fire Protection
+                </div>
+                <ul class="tech-specs">
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Sprinklers:</span> Wet/Dry/Pre-action</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Detection:</span> Smoke/Heat/Flame</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Code:</span> NFPA Compliant</li>
+                </ul>
+                <div class="service-summary">
+                  Complete fire safety systems including detection, alarm, suppression, and emergency evacuation designed to protect lives and property.
+                </div>
+                <a href="#" class="eng-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plumbing Card -->
+          <div class="col-lg-4">
+            <div class="engineering-card">
+              <div class="card-img-wrapper">
+                <img src="./assets/img/services/1e.jpg" class="card-img-top" alt="Plumbing Systems">
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <i class="bi bi-droplet-fill"></i>
+                  Plumbing & Sanitary System
+                </div>
+                <ul class="tech-specs">
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Supply:</span> Potable & Process Water</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Drainage:</span> Storm & Sanitary</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Piping:</span> Copper/PEX/HDPE</li>
+                </ul>
+                <div class="service-summary">
+                  Comprehensive plumbing infrastructure including water supply, drainage systems, and treatment facilities for commercial and industrial applications.
+                </div>
+                <a href="#" class="eng-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security Card -->
+          <div class="col-lg-4">
+            <div class="engineering-card">
+              <div class="card-img-wrapper">
+                <img src="./assets/img/services/1f.jpg" class="card-img-top" alt="Security Systems">
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <i class="bi bi-shield-lock-fill"></i>
+                  Communication & Security System
+                </div>
+                <ul class="tech-specs">
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Network:</span> Structured Cabling</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">CCTV:</span> IP/HD Surveillance</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Access:</span> Biometric/RFID</li>
+                </ul>
+                <div class="service-summary">
+                  Integrated security and communication systems including access control, video surveillance, and structured cabling for modern facilities.
+                </div>
+                <a href="#" class="eng-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tech-divider"></div>
+
+        <h2>Plant Engineering and Construction</h2>
+        <h3>We have the comprehensive resource to offer our clients to ensure efficient plant operation. Through the years, we have partnered with our valued clients, thus helping plants increase both in productivity and quality.</h3>
+        
+        <div class="row" id="service1">
+          <!-- Clean Room Card -->
+          <div class="col-lg-4">
+            <div class="engineering-card">
+              <div class="card-img-wrapper">
+                <img src="./assets/img/services/2a.jpg" class="card-img-top" alt="Clean Rooms">
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <i class="bi bi-fan"></i>
+                  Clean Rooms & Bio Clean Rooms
+                </div>
+                <ul class="tech-specs">
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Class:</span> ISO 1-9 Cleanrooms</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Filtration:</span> HEPA/ULPA</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Standard:</span> GMP/FDA Compliant</li>
+                </ul>
+                <div class="service-summary">
+                  Precision-controlled environments for semiconductor, pharmaceutical, and biotech industries meeting strict cleanliness and contamination control standards.
+                </div>
+                <a href="#" class="eng-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interior Works Card -->
+          <div class="col-lg-4">
+            <div class="engineering-card">
+              <div class="card-img-wrapper">
+                <img src="./assets/img/services/2b.jpg" class="card-img-top" alt="Interior Works">
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <i class="bi bi-building"></i>
+                  Interior Works
+                </div>
+                <ul class="tech-specs">
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Warehouse:</span> Storage & Logistics</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Canteen:</span> Food Service Facilities</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Offices:</span> Workspace Fit-Out</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Civil Works:</span> General Construction</li>
+                </ul>
+                <div class="service-summary">
+                  Complete interior construction and fit-out services for warehouses, canteens, offices, commercial buildings, and various civil works projects tailored to client specifications.
+                </div>
+                <a href="#" class="eng-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Plant Utilities Card -->
+          <div class="col-lg-4">
+            <div class="engineering-card">
+              <div class="card-img-wrapper">
+                <img src="./assets/img/services/2c.jpg" class="card-img-top" alt="Plant Utilities">
+              </div>
+              <div class="card-body">
+                <div class="card-title">
+                  <i class="bi bi-plug-fill"></i>
+                  Utilities System
+                </div>
+                <ul class="tech-specs">
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Steam:</span> Boiler & Distribution</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Compressed:</span> Air/Nitrogen</li>
+                  <li><i class="bi bi-dot"></i><span class="spec-label">Cooling:</span> Chilled/Process Water</li>
+                </ul>
+                <div class="service-summary">
+                  Central plant utility systems including steam generation, compressed air, process cooling, and waste treatment for industrial facilities.
+                </div>
+                <a href="#" class="eng-link">Learn More <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Building Services Section -->
+
+    <section id="about">
+    </section>
+
+    <!-- Project Status -->
+    <section id="call-to-action">
+      <div class="container" data-aos="zoom-out">
+        <h3 class="cta-title" align="center">Project Status</h3>
+        <br>
+        <div class="row" align="center">
+          <div class="col-lg-4 col-md-6">
+            <h3 style="color:white">152</h3>
+            <p class="cta-text">Done Projects </p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h3 style="color:white">38</h3>
+            <p class="cta-text">Active Projects </p>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h3 style="color:white">190</h3>
+            <p class="cta-text">Total </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header">
+          <h2><b>Project List</b></h2>
+        </div>
+        <nav>
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link btn-sm active" id="industrial-tab" data-bs-toggle="tab" data-bs-target="#industrial"
+                type="button" role="tab" aria-controls="industrial" aria-selected="true"><small>Industrial</small></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link btn-sm" id="industrial-tab" data-bs-toggle="tab" data-bs-target="#commercial"
+                type="button" role="tab" aria-controls="commercial" aria-selected="false"><small>Commercial</small></button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link btn-sm" id="activeproj-tab" data-bs-toggle="tab" data-bs-target="#activeproj"
+                type="button" role="tab" aria-controls="activeproj" aria-selected="false"><small>Active Projects</small></button>
+            </li>
+          </ul>
+        </nav>
+        <div class="tab-content" id="nav-tabContent" style="border:1px solid rgb(184, 184, 184)">
+          
+          <div class="tab-pane fade show active" id="industrial" role="tabpanel" aria-labelledby="industrial-tab"
+            style="padding:20px;">
+                    
+            <!-- ======= Portfolio Section ======= -->
+            <section id="portfolio" class="portfolio" style="display:block;">
+              <div class="container" data-aos="fade-up">
+              
+                <div class="row" data-aos="fade-up" data-aos-delay="100">
+                  <div class="col-lg-12 d-flex justify-content-center">
+                    <ul id="portfolio-flters">
+                      <li data-filter="*" class="filter-active">All</li>
+                      <li data-filter=".filter-cavite">Cavite</li>
+                      <li data-filter=".filter-clark">Clark</li>
+                      <li data-filter=".filter-batangas">Batangas</li>
+                      <li data-filter=".filter-laguna">Laguna</li>
+                      <li data-filter=".filter-makati">Makati</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200" style="min-height:400px; max-height:400px !important;overflow-y: scroll;">
+                  <!--====Cavite ====-->
+                  <div class="col-md-12 portfolio-item filter-cavite">
+                    <h6><b>Cavite</b></h6>
+                    <ul class="list-group">
+                      <li class="list-group-item"><div class="fw-bold">ROHM Electronics Phils</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 9</a></li>
+                      <li class="list-group-item"><div class="fw-bold">Hitachi Industrial Machinery Phils., Corp</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Pilipinas NM Inc.</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 2</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Suminac Phils., Inc.</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Tennex Phils., Corp</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">San Miguel Purefoods Meat Processing Plant</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">San Technology Inc.</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Taisei (Hoya-FCIE)</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 2</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">P. Imes Corporation</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Intel Technology Philippines</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Numonyx Phils., Inc.</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Luzon Electronics Technology</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Mayekawa-Purefoods</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                    </ul>
+                  </div>
+
+                  <!--====Clark ====-->
+                  <div class="col-md-12 portfolio-item filter-clark">
+                    <h6><b>Clark</b></h6>
+                    <ul class="list-group">
+                      <li class="list-group-item"><div class="fw-bold">Yokohama Rubber Factory</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">L & K Phils., Inc.</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 2</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Nanox Philippines, Inc.</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">SMK Electronics Corp</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Aderans</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 2</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Hitachi Asia-YTPI</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Riofil-Yokohama</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 2</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Kajima-Nanox</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                    </ul>
+                  </div>
+
+                  <!--====Batangas ====-->
+                  <div class="col-md-12 portfolio-item filter-batangas">
+                    <h6><b>Batangas</b></h6>
+                    <ul class="list-group">
+                      <li class="list-group-item"><div class="fw-bold">Sumisola Corporation</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Komyo Philippine Logistic Service Corp</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Sakamoto Orient Chem Corp</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Ecozone Properties Inc.</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Toshin Rubber Chem Inc</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Jideco Mfg. Inc.</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">First Philippine Industrial Park</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Big Mate Phils</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">SB Flex Phils., Inc</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Komyo Philippine Logistic Service Corp</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Isola Asia Pacific</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Sakamoto Orient Chem Corp</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 2</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Shi Mfg Services Phils</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Ibiden Philippines</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 2</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Fort Wayne Wire Die Phils</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Sunpower Phils Mfg</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 2</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Sunpower Phils Mfg - FAB2</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Nestle Philippines, Inc.</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 2</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">CCT-Bandai</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Littelfuse Phils., Inc.</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">CCT-Yamaichi</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Taisei-Vacuum Tech</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                      <li class="list-group-item"><div class="fw-bold">Mayekawa-Cargill Joy</div><a href="" style="color:rgb(16, 16, 114) !important">Total Project: 1</a> </li>
+                    </ul>
+                  </div>
+
+                  <!--==== Laguna ====-->
+                  <div class="col-md-12 portfolio-item filter-laguna">
+                    <h6><b>Laguna</b></h6>
+                    <ul class="list-group">
+                      <li class="list-group-item"><b>3 Projects</b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Matsushita Communication Phils., Inc.</a></li>
+                      <li class="list-group-item"><b>4 Projects</b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">FCC (Phils) Corp</a></li>
+                      <li class="list-group-item"><b>2 Projects</b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Kosei (Asia) Pacific, Inc.</a></li>
+                      <li class="list-group-item"><b>4 Projects</b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Hitachi Computer Products Asia</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Moriroku Phils., Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Star Motor Mfg. Industry, Inc.</a></li>
+                      <li class="list-group-item"><b>2 Projects</b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Kito Phils., Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Katolec Phils., Inc.</a></li>
+                      <li class="list-group-item"><b>2 Projects</b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Kuroda-Hoyo (Phils) Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">NSG Phils., Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Kuroda-Hoyo (Phils) Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">TDK Philippines</a></li>
+                      <li class="list-group-item"><b>2 Projects</b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Chiyoda Integre Phils., Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Sumitronics Philippines, Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">SMC Pneumatics Phils., Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Shin Etsu Magnetic Phil., Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">NSG Phils., Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Kapco Mfg</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Ogino Phils., Corp</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Ford Motor Philippines</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Procter & Gamble Phils</a></li>
+                      <li class="list-group-item"><b>2 Projects</b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Hitachi Global Storage Technology</a></li>
+                      <li class="list-group-item"><b>2 Projects</b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Hoya Glass Disk Phils., Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Hitachi Asia-Nikko Metal</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Cypress-Deca Technologies Inc.</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Hitachi Asia (Panasonic)</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Sunpower Phils Mfg - MODCO</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Austriamicrosystem Phils</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">CCL Label Industries Phils., Inc.</a></li>
+                      <li class="list-group-item"><b>2 Projects</b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">HGST Philippines Corp</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Austriamicrosystem Phils</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Austriamicrosystem Phils</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Austriamicrosystem Phils</a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Austriamicrosystem Phils</a></li>
+                    </ul>
+                  </div>
+
+                  <!--==== Makati ====-->
+                  <div class="col-md-12 portfolio-item filter-makati">
+                    <h6><b>Makati</b></h6>
+                    <ul class="list-group">
+                      <li class="list-group-item"><b>4 Projects</b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Ayala Land Inc. </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Westin Plaza Hotel </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Makati Skyplaza Inc </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Kajima Resources Development </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Bio-Takeda Chemicals </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Itochu Corp - Manila Branch </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Japan Airlines </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Philippine EDS Technoservice </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Philippine Fuji Xerox Corp </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Universal Holidays </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Standard Chartered Bank </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Kawasaki Group </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Bank of Tokyo Mitsubishi </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Hitachi Works Manila Design Office </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">SHI Design Office </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">NKK Techno Manila </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Manansala at Rockwell </a></li>
+                      <li class="list-group-item"><b>1 Project  </b> | Client: <a href="" style="color:rgb(16, 16, 114) !important">Concentrix CVG </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section><!-- End Portfolio Section -->
+          </div>
+
+          <div class="tab-pane fade" id="commercial" role="tabpanel" aria-labelledby="commercial-tab"
+            style="border:1px solid rgb(236, 236, 236);padding:20px;">
+            <div class="col-md-12">
+              <ul class="list-group">
+                <li class="list-group-item"><b>1 Project</b> | Client: <a href=""style="color:rgb(16, 16, 114) !important">Glorieta Shopping Center</a></li>
+                <li class="list-group-item"><b>1 Project</b> | Client: <a href=""style="color:rgb(16, 16, 114) !important">Greenbelt Shopping Mall</a> </li>
+                <li class="list-group-item"><b>1 Project</b> | Client: <a href=""style="color:rgb(16, 16, 114) !important">Makati Supermarket (Alabang)</a></li>
+                <li class="list-group-item"><b>1 Project</b> | Client: <a href=""style="color:rgb(16, 16, 114) !important">Westine Philippine Plaza</a></li>
+                <li class="list-group-item"><b>1 Project</b> | Client: <a href=""style="color:rgb(16, 16, 114) !important">Makati Sky Plaza (Tenant Works, Office Fit Out</a></li>
+                <li class="list-group-item"><b>1 Project</b> | Client: <a href=""style="color:rgb(16, 16, 114) !important">Standard Chartered Bank</a></li>
+                <li class="list-group-item"><b>1 Project</b> | Client: <a href=""style="color:rgb(16, 16, 114) !important">Rockwell Manansala (Sub Structure works</a></li>
+                <li class="list-group-item"><b>1 Project</b> | Client: <a href=""style="color:rgb(16, 16, 114) !important">NKK Techno Manila Office</a></li>
+                <li class="list-group-item"><b>1 Project</b> | Client: <a href=""style="color:rgb(16, 16, 114) !important">Hitachi Industrial Machinery Philippines</a></li>
+                <li class="list-group-item"><b>1 Project</b> | Client: <a href=""style="color:rgb(16, 16, 114) !important">Shi Design Office</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="activeproj" role="tabpanel" aria-labelledby="activeproj-tab"
+            style="border:1px solid rgb(236, 236, 236);padding:20px;min-height:400px; max-height:400px !important;overflow-y: scroll;">
+            <ul class="list-group">
+              <li class="list-group-item"><b>Project:</b>CONCENTRIX-EXHAUST DUCT & REFRIGERANT RISER-14F  TO ROOFDECK <br> <b>Client:</b> CONCENTRIX CVG PHILS, INC.      </li>
+              <li class="list-group-item"> <b>Project:</b>WACOAL OFFICE RENOVATION-M & E WORKS  <br><b>Client:</b>  KAJIMA PHILIPPINES, INC.   </li>
+              <li class="list-group-item"> <b>Project:</b>PATS-CONSTRUCTION SUPERVISION SERVICE <br><b>Client:</b>  PHILIPPINES ARAYAT TRAINING SCHOOL </li>
+              <li class="list-group-item"> <b>Project:</b>IBIDEN-INSTN.OF CHEMICAL FEED & WW PIPING FOR RESIST #5-FAC-D-1F <br> <b>Client:</b>  IBIDEN PHILIPPINES INC.    </li>
+              <li class="list-group-item"> <b>Project:</b>HGST-UTILITIES CONST. FOR AFL4G-CHANGE NOTICE #1  <br><b>Client:</b>  HGST PHILIPPINES CORP.<br>  </li>
+              <li class="list-group-item"> <b>Project:</b>IBIDEN-INSTN.OF CHEMICAL FEED & WW PIPING FOR RESIST #5-FAC-D-1F<b>Client:</b>  IBIDEN PHILIPPINES INC. <br>  </li>
+              <li class="list-group-item"> <b>Project:</b>AMS-PROPOSED  VAN OFFICE & SHOWER RM-M & E W <br><b>Client:</b>  SMCC PHILIPPINES, INC.</li>
+              <li class="list-group-item"> <b>Project:</b>HGST-UTILITIES CONST-FOR HGA-ADDL.LINES BATCH-2-R2 <br><b>Client:</b>  HGST PHILIPPINES CORP.   </li>
+              <li class="list-group-item"> <b>Project:</b>HGST-UTILITIES CONST-FOR DLCX CRYO PUMP PCW INSTN. <br><b>Client:</b>  HGST PHILIPPINES CORP.    </li>
+              <li class="list-group-item"> <b>Project:</b>2020 ELECTRICAL SHUTDOWN MAINT. <br> <b>Client:</b>  HGST PHILIPPINES CORP.    </li>
+              <li class="list-group-item"> <b>Project:</b>UTILITIES CONST.FOR ADDL.-4-HGA AUTOMATION-R2  <br> <b>Client:</b>  HGST PHILIPPINES CORP.  </li>
+              <li class="list-group-item"> <b>Project:</b>HGST-SUPPLY OF 150mm2-XLPE,THIPHA BRAND POWER CABLE <br> <b>Client:</b>  HGST PHILIPPINES CORP.  </li>
+              <li class="list-group-item"> <b>Project:</b>HGST-UTILITIES CONST.BCL LEG IMPROVEMENT-PH.2 <br> <b>Client:</b>  HGST PHILIPPINES CORP.   </li>
+              <li class="list-group-item"> <b>Project:</b>ELECTRICAL WORKS FOR REPLACEMENT OF GEN3 <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC.   </li>
+              <li class="list-group-item"> <b>Project:</b>YTPI-SUPPLY/INSTN OF MACHINE LIGHTINGS-PH.3 <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC.     </li>
+              <li class="list-group-item"> <b>Project:</b>YTPI-SUPPLY/INSTN.OF WIRE DETECTOR SENSOR-UF 0.5 <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC.    </li>
+              <li class="list-group-item"> <b>Project:</b>IWSP-PLANT-6 CONSTRUCTION-M & E WORKS <br>  <b>Client:</b>  RIOFIL CORPORATION  </li>
+              <li class="list-group-item"> <b>Project:</b>IWSP-PLANT-6 CONSTRUCTION-M & E WORKS <br> <b>Client:</b>  RIOFIL CORPORATION <br>   </li>
+              <li class="list-group-item"> <b>Project:</b>YTPI-AUTOMATIC FIRE SPRINKLER SYSTEM-PART-2  <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC. <br>  </li>
+              <li class="list-group-item"> <b>Project:</b>SONION-INSTN.OF 12 ADDL.SLOTS OF LAN CONNECTION <br> <b>Client:</b>  SONION PHILS.INC. <br>   </li>
+              <li class="list-group-item"> <b>Project:</b>YTPI-BRANCH VALVE INSTN.-BATCH 1 &2-MECHL.WORKS <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC. <br>   </li>
+              <li class="list-group-item"> <b>Project:</b>YTPI-BRANCH VALVE INSTN.-BATCH 1 &2-MECHL.WORKS  <br><b>Client:</b>  YOKOHAMA TIRE PHILS. INC. <br>  </li>
+              <li class="list-group-item"> <b>Project:</b>YTPI-BRANCH VALVE INSTN.-BATCH 1 &2-MECHL.WORKS  <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC. <br>  </li>
+              <li class="list-group-item"> <b>Project:</b>YTPI-CURING C-LINE LIGHTING MODIFICATION-OPT-2    <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC. <br></li>
+              <li class="list-group-item"> <b>Project:</b>AIRCONDITIONING PROJ.FOOR EXTERNAL FG WHSE <br> <b>Client:</b>  JT INTERNATIONAL (PHILS.)INC. <br>   </li>
+              <li class="list-group-item"> <b>Project:</b>YAMAICHI-PROP.ELECL.MODIFICATION OF MOLDING MACHINES 129 & 130  <br> <b>Client:</b>  CCT CONSTRUCTORS CORP.   </li>         
+              <li class="list-group-item"> <b>Project:</b>YTPI-VENTILATION DUCT OFF SETTING <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC. <br>   </li>
+              <li class="list-group-item"> <b>Project:</b>IKPC-PLANT CAPACITY INCREASE-INSTN.OF ADDL.EXTRUDER#6 & #7  <br> <b>Client:</b>  IK PLASTIC COMPOUND PHILS.INC. <br>  </li>
+              <li class="list-group-item"> <b>Project:</b>YTPI-SUPPLY FAN & DUCTING  AT CURING THX-C-LINE <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC.     </li>
+              <li class="list-group-item"> <b>Project:</b>YTPI-ADDL.POINTS FOR EP & WP BOILER MONITORING SYSTEM,REWIRING OF PERIMETER LIGHTINGS AT WP <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC.    </li>
+              <li class="list-group-item"> <b>Project:</b>PHILINAK-FDAS RECOMMENDATION WORKS  <br> <b>Client:</b>  CCT CONSTRUCTORS CORP.   </li>              
+              <li class="list-group-item"> <b>Project:</b>YTPI-P2-N2-HIGH PRESSURE SUPPLY LINE AT EAST PLT.BOILER AREA & REWIRING-DIESEL PUMP POWER SUP <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC.   </li>
+              <li class="list-group-item"> <b>Project:</b>YTPI-CONVERSION OF PANEL TO DUSTPROOF, MCCB TO ELCB NEW PANEL AT ADMIN-LM-5-3  <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC.  </li>
+              <li class="list-group-item"> <b>Project:</b>SANTECH-INSTN.OF EMERGENCY EXIT DOOR <br> <b>Client:</b>  SAN TECHNOLOGY INC     </li>
+              <li class="list-group-item"> <b>Project:</b>JUKEN-PROPOSED NEW WAREHOUSE BUILDING <br> <b>Client:</b>  RIOFIL CORPORATION</li>
+              <li class="list-group-item"> <b>Project:</b>YTPI-INSTN.OF SUPPLY DUCT AT GIP OPERATOR G-J-EP-PH.3  <br> <b>Client:</b>  YOKOHAMA TIRE PHILS. INC.   </li>
+              <li class="list-group-item"> <b>Project:</b> YOKOWO NEW FACTORY CONST.-MEPF WORKS <br> <b>Client:</b>  RIOFIL CORPORATION    </li>
+              <li class="list-group-item"> <b>Project:</b>CHIYODA-RE-PIPING OF KITCHEN MAIN SEWERLINE AT PLANT-1  <br> <b>Client:</b>  CCT CONSTRUCTORS CORP.   </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Clients Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer" style="padding:0px !important; margin:0px !important;border:0px !important"> 
+    <section id="call-to-action" style="color:white !important; padding-bottom: 10px !important">
+      <div class="row">
+        <div class="col-lg-4"><img src="./assets/img/ISO.png" width="280px" alt=""></div>
+        <div class="col-lg-6" style="text-align: left !important;">
+          <br>
+          <h5>Office Address</h5>
+          <a href="./contact.html" style="color:white !important">Head Office</a> <br>
+          <ul class="list-unstyled">
+            <li><i class="bi bi-map" style="color:rgb(124, 180, 124) !important;padding-left:10px !important"></i> 11th Floor,
+              Oledan Square 6788 Ayala Avenue, Makati City, Philippines</li>
+            <li><i class="bi bi-phone" style="color:rgb(126, 172, 126) !important;padding-left:10px !important"></i> +632 8
+              886-6974 to 83 </li>
+            <a href="./contact.html" style="color:white !important">Satellite Office</a>
+            <li><i class="bi-map" style="color:rgb(131, 197, 131) !important;padding-left:10px !important"></i> 2nd St. Block 4
+              Lot 6 Meridian Industrial Complex, Sta. Rosa City, Laguna</li>
+            <li><i class="bi bi-telephone" style="color:rgb(141, 192, 141) !important;padding-left:10px !important"></i> +634 9
+              503-4720</li>
+          </ul>
+        </div>
+        <div class="col-lg-1" style="text-align: left !important;color:rgb(235, 235, 235) !important">
+          <br>
+          <br>
+          <ul class="list-unstyled">
+            <li><a href="./about.html" style="color:white !important"> About Us</a></li>
+            <li><a href="./services.html" style="color:white !important">Services</a></li>
+            <li><a href="./news.html" style="color:white !important">News</a></li>
+            <li><a href="./org.html" style="color:white !important">Organization</a></li>
+            <li><a href="./careers.html" style="color:white !important">Careers</a></li>
+            <li><a href="./contact.html" style="color:white !important">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div align="center" id="myicons">
+          <a href="https://twitter.com/PHPCCoLtdInc" class="twitter"><i class="bi bi-twitter"></i></a> 
+          <a href="https://www.facebook.com/PHPCCoLtdInc" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/phpc-co.-ltd.-inc." class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="col-md-6">
+          PHPC Co., Ltd, Inc © 2021. All Rights Reserved. 
+        </div>
+        <div class="col-md-6">
+          <a href="./disclaimer.html" style="color:white !important"><small>Disclaimer</small></a> | <a href="./termsofuse.html" style="color:white !important"><small>Terms and use</small></a>
+        </div>
+      </div>
+    </section>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/js/popover.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
