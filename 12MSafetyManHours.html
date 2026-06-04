@@ -5,13 +5,14 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>PHPC Co., Ltd. Inc - 12 Million Safe Man-Hours</title>
-  <meta content="PHPC celebrates 12 million safe man-hours — a record-breaking achievement in workplace safety." name="description">
-  <meta content="12 million safe man-hours, PHPC safety milestone, workplace safety" name="keywords">
-  <meta name="robots" content="noindex,nofollow">
+  <title>PHPC Co., Ltd. Inc · 12 Million Safe Man-Hours</title>
+  <meta content="PHPC achieves record-breaking 12 million safe man-hours milestone, a KANDENKO Group company" name="description">
+  <meta content="safety milestone,safe man-hours,construction safety,PHPC,KANDENKO,12 million" name="keywords">
+  <meta name="robots" content="noindex,nofollow"> 
+  
   <!-- Favicons -->
   <link href="assets/img/kan.ico" rel="icon">
-
+  
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700" rel="stylesheet">
 
@@ -24,14 +25,225 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.min.css" >
   <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.css" >
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <style>
+    .article-content h3 {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4a5568;
+      font-weight: 400;
+    }
+    
+    .article-content .highlight-box {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border-left: 4px solid #198754;
+      padding: 20px 25px;
+      border-radius: 0 12px 12px 0;
+      margin: 25px 0;
+      font-style: italic;
+      color: #14532d;
+    }
+    
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 15px 0 20px;
+    }
+    
+    .article-meta .badge {
+      background: linear-gradient(135deg, #198754, #146c43);
+      color: white;
+      padding: 6px 15px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    
+    .article-meta .date {
+      color: #6c757d;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .article-meta .date i {
+      color: #198754;
+    }
+    
+    .carousel {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+    
+    .carousel-item img {
+      height: 450px;
+      object-fit: contain;
+      background: #f8f9fa;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .carousel:hover .carousel-control-prev,
+    .carousel:hover .carousel-control-next {
+      opacity: 1;
+    }
+    
+    .carousel-indicators {
+      margin-bottom: 15px;
+    }
+    
+    .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid white;
+      background: transparent;
+      opacity: 0.7;
+    }
+    
+    .carousel-indicators button.active {
+      background: white;
+      opacity: 1;
+    }
+    
+    .sidebar-recent {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    
+    .sidebar-recent b {
+      font-size: 1.1rem;
+      color: #1e2c3a;
+      display: block;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #198754;
+    }
+    
+    .sidebar-recent ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .sidebar-recent ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .sidebar-recent ul li:last-child {
+      border-bottom: none;
+    }
+    
+    .sidebar-recent ul li a {
+      color: #4a5568;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+      display: block;
+    }
+    
+    .sidebar-recent ul li a:hover {
+      color: #198754;
+    }
+    
+    .sidebar-recent ul li a.active {
+      color: #198754;
+      font-weight: 600;
+    }
+    
+    .share-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e9ecef;
+    }
+    
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .share-btn.facebook {
+      background: #1877f2;
+      color: white;
+    }
+    
+    .share-btn.twitter {
+      background: #1da1f2;
+      color: white;
+    }
+    
+    .share-btn.linkedin {
+      background: #0a66c2;
+      color: white;
+    }
+    
+    .share-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      color: white;
+    }
+    
+    .back-to-news {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #198754;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 25px;
+      transition: gap 0.3s ease;
+    }
+    
+    .back-to-news:hover {
+      gap: 12px;
+      color: #146c43;
+    }
+    
+    @media (max-width: 768px) {
+      .carousel-item img {
+        height: 250px;
+      }
+      
+      .article-content h3 {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-  <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
@@ -39,24 +251,21 @@
         <i class="bi bi-phone d-flex align-items-center ms-4"><span>+632 8 886-6974 to 83</span></i>
       </div>
       <div class="social-links d-none d-md-flex align-items-center">
-        <a href="https://twitter.com/PHPCCoLtdInc" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="https://twitter.com/PHPCCoLtdInc" class="twitter"><i class="bi bi-twitter"></i></a> 
         <a href="https://www.facebook.com/PHPCCoLtdInc" class="facebook"><i class="bi bi-facebook"></i></a>
         <a href="https://www.linkedin.com/company/phpc-co.-ltd.-inc." class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
-  </section><!-- End Top Bar-->
+  </section>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex justify-content-between">
-
       <div id="logo">
-        <a href="index.html"><img src="assets/img/phpckan.PNG" height="50px" alt=""></a>
+        <a href="index.html"><img src="assets/img/phpckan.PNG" height="50px" alt="PHPC logo"></a>
       </div>
-
       <nav id="navbar" class="navbar">
-        <ul >
-          <li><a class="nav-link scrollto " href="./index.html">Home</a></li>
+        <ul>
+          <li><a class="nav-link scrollto" href="./index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="./about.html">About</a></li>
           <li><a class="nav-link scrollto" href="./services.html">Our Services</a></li>
           <li><a class="nav-link scrollto active" href="./news.html">News</a></li>
@@ -65,133 +274,177 @@
           <li><a class="nav-link scrollto" href="./contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
   <main id="main">
-
     <div id="about">
       <div class="container">
         <div class="row">
           <div class="col-lg-9">
+            <a href="./news.html" class="back-to-news">
+              <i class="bi bi-arrow-left"></i> Back to News
+            </a>
+            
             <h2>Latest News and Events</h2>
             <hr>
-            <small>December 18, 2025</small>
-            <h4>Record-Breaking Achievement: 12 Million Safe Man-Hours<br><small>PHPC Co., Ltd., Inc., a proud member of the KANDENKO Group, celebrates its most significant safety milestone yet — achieving 12 million safe man-hours at the Satellite Office, Meridian Industrial Complex in Sta. Rosa, Laguna.</small></h4>
+            
+            <div class="article-meta">
+              <span class="badge">🏆 Safety Milestone</span>
+              <span class="date"><i class="bi bi-calendar3"></i> December 18, 2025</span>
+              <span class="date"><i class="bi bi-clock"></i> 3 min read</span>
+            </div>
+            
+            <h4>Record-Breaking Achievement: PHPC Reaches 12 Million Safe Man-Hours</h4>
             <br>
-
-            <div class="row" style="margin-top: 20px;">
-              <div class="container mt-4">
-                <div class="row">
-                  <!-- Main Image Section -->
-                  <div class="col-lg-8 col-md-7 col-sm-12 mb-3">
-                    <img src="./assets/img/12-mil.jpg" class="d-block w-100" alt="12 Million Safe Man-Hours" style="border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,0.15);">
-                  </div>
-
-                  <!-- Sidebar Section -->
-                  <div class="col-lg-4 col-md-5 col-sm-12">
-                    <h5 class="mb-3">RECENT POST</h5>
-                    <ul class="list-group">
-                      <li><a href="./CorporateSocialResponsibility9.html">PHPC Corporate Social Responsibility Activity 9</a></li>
-                      <li><a href="./CorporateSocialResponsibility8.html">PHPC Corporate Social Responsibility Activity 8</a></li>
-                      <li><a href="./CorporateSocialResponsibility7.html">PHPC Corporate Social Responsibility Activity 7</a></li>
-                      <li><a href="./CorporateSocialResponsibility6.html">PHPC Corporate Social Responsibility Activity 6</a></li>
-                      <li><a href="./CorporateSocialResponsibility5.html">PHPC Corporate Social Responsibility Activity 5</a></li>
-                      <li><a href="./CorporateSocialResponsibility4.html">PHPC Corporate Social Responsibility Activity 4</a></li>
-                      <li><a href="./CorporateSocialResponsibility3.html">PHPC Corporate Social Responsibility Activity 3</a></li>
-                      <li><a href="./CorporateSocialResponsibility2.html">PHPC Corporate Social Responsibility Activity 2</a></li>
-                      <li><a href="./CorporateSocialResponsibility1.html">PHPC Corporate Social Responsibility Activity 1</a></li>
-                    </ul>
-                  </div>
-                </div>
-
-                <!-- Description Paragraph -->
-                <div class="row mt-4">
-                  <div class="col-12">
-                    <p style="text-align: justify;">
-                      As an in-house workplace safety is a cornerstone of operational excellence, PHPC Co., Ltd. strives to ensure that standard is furthered through its unwavering commitment to health and safety. A special initiative marks PHPC's investment in a better and safer environment by establishing a new system and enforcing awareness. That marks a highlight PHPC's crucial safety values and the significance of such achievements in bolstering employee well-being and operational integrity.
-                    </p>
-                    <p style="text-align: justify;">
-                      This remarkable accomplishment underscores the company's unwavering dedication to workplace safety, operational excellence, and the well-being of every team member. Achieving 12 million safe man-hours with zero lost time injury is a testament to the disciplined safety culture embedded across all PHPC project sites.
-                    </p>
-                  </div>
+         
+            <!-- Image Carousel -->
+            <div id="carousel12MSafety" style="width: 100%; max-width: 95%;" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carousel12MSafety" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              </div>
+              
+              <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="4000">
+                  <img src="./assets/img/12-mil.jpg" class="d-block w-100" alt="12 Million Safe Man-Hours Achievement">
                 </div>
               </div>
+              
+              <button class="carousel-control-prev" type="button" data-bs-target="#carousel12MSafety" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carousel12MSafety" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            
+            <br>
+            
+            <div class="article-content">
+              <h3>
+                PHPC Co., Ltd., Inc., a proud member of the <strong>KANDENKO Group</strong>, celebrates its most significant safety milestone yet — achieving <strong>12 million safe man-hours</strong> at the Satellite Office, Meridian Industrial Complex in Sta. Rosa, Laguna. This record-breaking accomplishment underscores the company's unwavering dedication to workplace safety, operational excellence, and the well-being of every team member.
+              </h3>
+              
+              <div class="highlight-box">
+                <i class="bi bi-quote" style="font-size: 2rem; opacity: 0.5;"></i>
+                <p style="margin: 10px 0 0;">"Twelve million safe man-hours is a record-breaking achievement that reflects the heart of our organization — a workforce united by a shared commitment to safety, excellence, and looking out for one another every single day."</p>
+              </div>
+              
+              <h3>
+                This record-breaking achievement of 12 million safe man-hours without a lost time incident stands as the crowning testament to PHPC's world-class safety management systems. As a proud member of the KANDENKO Group, PHPC has consistently demonstrated that safety excellence is achievable through discipline, continuous improvement, and an unwavering commitment to protecting every worker.
+                <br><br>
+                <strong style="color: #198754;">🏗️ The KANDENKO Group Safety Standard:</strong>
+                <br>
+                • Comprehensive safety orientation and world-class training for all personnel
+                <br>
+                • Rigorous safety audits and proactive workplace inspections
+                <br>
+                • Uncompromising enforcement of PPE requirements and safety protocols
+                <br>
+                • Advanced hazard identification and comprehensive risk assessment
+                <br>
+                • Holistic employee wellness and health monitoring programs
+                <br>
+                • Continuous emergency response preparedness and simulation drills
+                <br><br>
+                <strong style="color: #198754;">👷 A Record-Breaking Achievement for the Entire KANDENKO Family</strong>
+                <br><br>
+                This record-breaking milestone belongs to every worker at the Satellite Office, Meridian Industrial Complex who arrives each day dedicated to performing their duties with safety as the top priority. It honors the safety officers who maintain constant vigilance, the supervisors who lead through their example, and the management team that ensures safety remains the cornerstone of every operation.
+                <br><br>
+                As we celebrate this extraordinary achievement of 12 million safe man-hours, PHPC — together with the KANDENKO Group — reaffirms its unwavering commitment to setting the benchmark for workplace safety. We will continue investing in advanced safety training, innovative technologies, and robust protective systems. From this record-breaking milestone, we set our sights even higher, knowing that each safe man-hour represents a worker returning home safely to their loved ones at the end of each day.
+              </h3>
+            </div>
+            
+            <div class="share-buttons">
+              <span style="color: #6c757d; font-size: 0.9rem; display: flex; align-items: center;">Share:</span>
+              <a href="#" class="share-btn facebook"><i class="bi bi-facebook"></i> Facebook</a>
+              <a href="#" class="share-btn twitter"><i class="bi bi-twitter"></i> Twitter</a>
+              <a href="#" class="share-btn linkedin"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            </div>
+            
+          </div>
+          
+          <div class="col-lg-3">
+            <div class="sidebar-recent">
+              <b>Recent Posts</b>
+              <ul>
+                <li><a href="./17national-excellence.html">17th National Excellence Award 🏆</a></li>
+                <li><a href="./12MSafetyManHours.html" class="active">12 Million Safe Man-Hours 🏆</a></li>
+                <li><a href="./11MSafetyManHours.html">11 Million Safe Man-Hours</a></li>
+                <li><a href="./10MSafetyManHours.html">10 Million Safe Man-Hours</a></li>
+                <li><a href="./9MSafetyManHours.html">9 Million Safe Man-Hours</a></li>
+                <li><a href="./8MSafetyManHours.html">8 Million Safe Man-Hours</a></li>
+                <li><a href="./7MSafetyManHours.html">7 Million Safe Man-Hours</a></li>
+                <li><a href="./CorporateSocialResponsibility6.html">CSR — La Mesa Tree Planting 🌱</a></li>
+                <li><a href="./CorporateSocialResponsibility5.html">CSR — Marinduque Academy</a></li>
+                <li><a href="./CorporateSocialResponsibility4.html">CSR — Langkaan Elementary</a></li>
+                <li><a href="./CorporateSocialResponsibility3.html">CSR — Lumil Integrated NHS</a></li>
+                <li><a href="./CorporateSocialResponsibility2.html">CSR — Hoyo Elementary</a></li>
+                <li><a href="./CorporateSocialResponsibility1.html">CSR — Sta. Monica Elementary</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </main>
 
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer" style="padding:0px !important; margin:0px !important;border:0px !important" >
-    <section id="call-to-action"  style="color:white !important; padding-bottom: 10px !important">
+  <footer id="footer" class="footer" style="padding:0px !important; margin:0px !important;border:0px !important"> 
+    <section id="call-to-action" style="color:white !important; padding-bottom: 10px !important">
       <div class="row">
-        <div class="col-lg-4"><img src="./assets/img/ISO.png" width="280px" alt=""></div>
+        <div class="col-lg-4"><img src="./assets/img/ISO.png" width="280px" alt="ISO certification"></div>
         <div class="col-lg-6" style="text-align: left !important;">
           <br>
-          <h5>Office Address</h5>
+          <h5>📍 Office Address</h5>
           <a href="./contact.html" style="color:white !important">Head Office</a> <br>
           <ul class="list-unstyled">
-            <li><i class="bi bi-map" style="color:rgb(124, 180, 124) !important;padding-left:10px !important"></i> 11th Floor,
-              Oledan Square 6788 Ayala Avenue, Makati City, Philippines</li>
-            <li><i class="bi bi-phone" style="color:rgb(126, 172, 126) !important;padding-left:10px !important"></i> +632 8
-              886-6974 to 83 </li>
-            <a href="./contact.html" style="color:white !important" >Satellite Office</a>
-            <li><i class="bi bi-map" style="color:rgb(131, 197, 131) !important;padding-left:10px !important"></i> 2nd St. Block 4
-              Lot 6 Meridian Industrial Complex, Sta. Rosa City, Laguna</li>
-            <li><i class="bi bi-telephone" style="color:rgb(141, 192, 141) !important;padding-left:10px !important"></i> +634 9
-              503-4720</li>
+            <li><i class="bi bi-map" style="color:rgb(124, 180, 124) !important;padding-left:10px !important"></i> 11th Floor, Oledan Square 6788 Ayala Avenue, Makati City, Philippines</li>
+            <li><i class="bi bi-phone" style="color:rgb(126, 172, 126) !important;padding-left:10px !important"></i> +632 8 886-6974 to 83 </li>
+            <a href="./contact.html" style="color:white !important">Satellite Office</a>
+            <li><i class="bi-map" style="color:rgb(131, 197, 131) !important;padding-left:10px !important"></i> 2nd St. Block 4 Lot 6 Meridian Industrial Complex, Sta. Rosa City, Laguna</li>
+            <li><i class="bi bi-telephone" style="color:rgb(141, 192, 141) !important;padding-left:10px !important"></i> +634 9 503-4720</li>
           </ul>
         </div>
-
         <div class="col-lg-1" style="text-align: left !important;color:rgb(235, 235, 235) !important">
-          <br>
-          <br>
+          <br><br>
           <ul class="list-unstyled">
-            <li><a href="./about.html" style="color:white !important"> About Us</a></li>
+            <li><a href="./about.html" style="color:white !important">About Us</a></li>
             <li><a href="./services.html" style="color:white !important">Services</a></li>
             <li><a href="./news.html" style="color:white !important">News</a></li>
             <li><a href="./org.html" style="color:white !important">Organization</a></li>
-            <li><a href="./careers.html"style="color:white !important">Careers</a></li>
-            <li><a href="./contact.html"style="color:white !important">Contact</a></li>
+            <li><a href="./careers.html" style="color:white !important">Careers</a></li>
+            <li><a href="./contact.html" style="color:white !important">Contact</a></li>
           </ul>
         </div>
       </div>
-
-      <div class="row" >
+      <div class="row">
         <div align="center" id="myicons">
-          <a href="https://twitter.com/PHPCCoLtdInc" class="twitter"><i class="bi bi-twitter"></i></a>
+          <a href="https://twitter.com/PHPCCoLtdInc" class="twitter"><i class="bi bi-twitter"></i></a> 
           <a href="https://www.facebook.com/PHPCCoLtdInc" class="facebook"><i class="bi bi-facebook"></i></a>
           <a href="https://www.linkedin.com/company/phpc-co.-ltd.-inc." class="linkedin"><i class="bi bi-linkedin"></i></a>
         </div>
-        <div class="col-md-6" >
-          PHPC Co., Ltd, Inc © 2021. All Rights Reserved.
+        <div class="col-md-6">
+          PHPC Co., Ltd, Inc © 2021. All Rights Reserved. 
         </div>
         <div class="col-md-6">
-          <a href="./disclaimer.html" style="color:white !important"><small>Disclaimer</small></a> | <a href="./termsofuse.html" style="color:white !important"><small >Terms and use</small></a>
+          <a href="./disclaimer.html" style="color:white !important"><small>Disclaimer</small></a> | <a href="./termsofuse.html" style="color:white !important"><small>Terms and use</small></a>
         </div>
       </div>
     </section>
-  </footer><!-- End Footer -->
-
+  </footer>
+  
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
-

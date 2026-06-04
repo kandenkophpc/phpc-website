@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>PHPC Co., Ltd. Inc</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>PHPC Co., Ltd. Inc · Hoyo Elementary School Outreach</title>
+  <meta content="PHPC Corporate Social Responsibility Activity at Hoyo Elementary School in Silang, Cavite" name="description">
+  <meta content="CSR,community outreach,education support,Hoyo Elementary School,PHPC" name="keywords">
   <meta name="robots" content="noindex,nofollow"> 
+  
   <!-- Favicons -->
   <link href="assets/img/kan.ico" rel="icon">
   
@@ -24,15 +25,224 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.min.css" >
   <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.css" >
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-
+  <style>
+    /* Article Page Enhancements */
+    .article-content h3 {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4a5568;
+      font-weight: 400;
+    }
+    
+    .article-content .highlight-box {
+      background: linear-gradient(135deg, #f0f7ff 0%, #e8f4fd 100%);
+      border-left: 4px solid #0d6efd;
+      padding: 20px 25px;
+      border-radius: 0 12px 12px 0;
+      margin: 25px 0;
+      font-style: italic;
+      color: #2c5282;
+    }
+    
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 15px 0 20px;
+    }
+    
+    .article-meta .badge {
+      background: linear-gradient(135deg, #fd7e14, #dc6502);
+      color: white;
+      padding: 6px 15px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    
+    .article-meta .date {
+      color: #6c757d;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .article-meta .date i {
+      color: #0d6efd;
+    }
+    
+    .carousel {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+    
+    .carousel-item img {
+      height: 450px;
+      object-fit: cover;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .carousel:hover .carousel-control-prev,
+    .carousel:hover .carousel-control-next {
+      opacity: 1;
+    }
+    
+    .carousel-indicators {
+      margin-bottom: 15px;
+    }
+    
+    .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid white;
+      background: transparent;
+      opacity: 0.7;
+    }
+    
+    .carousel-indicators button.active {
+      background: white;
+      opacity: 1;
+    }
+    
+    .sidebar-recent {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    
+    .sidebar-recent b {
+      font-size: 1.1rem;
+      color: #1e2c3a;
+      display: block;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #0d6efd;
+    }
+    
+    .sidebar-recent ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .sidebar-recent ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .sidebar-recent ul li:last-child {
+      border-bottom: none;
+    }
+    
+    .sidebar-recent ul li a {
+      color: #4a5568;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+      display: block;
+    }
+    
+    .sidebar-recent ul li a:hover {
+      color: #0d6efd;
+    }
+    
+    .sidebar-recent ul li a.active {
+      color: #0d6efd;
+      font-weight: 600;
+    }
+    
+    .share-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e9ecef;
+    }
+    
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .share-btn.facebook {
+      background: #1877f2;
+      color: white;
+    }
+    
+    .share-btn.twitter {
+      background: #1da1f2;
+      color: white;
+    }
+    
+    .share-btn.linkedin {
+      background: #0a66c2;
+      color: white;
+    }
+    
+    .share-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      color: white;
+    }
+    
+    .back-to-news {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #0d6efd;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 25px;
+      transition: gap 0.3s ease;
+    }
+    
+    .back-to-news:hover {
+      gap: 12px;
+      color: #0a58ca;
+    }
+    
+    @media (max-width: 768px) {
+      .carousel-item img {
+        height: 250px;
+      }
+      
+      .article-content h3 {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
-
-
 
   <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center">
@@ -52,15 +262,12 @@
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex justify-content-between">
-
       <div id="logo">
-        <a href="index.html"><img src="assets/img/phpckan.PNG" height="50px" alt=""></span></a>
-        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="index.html"><img src="assets/img/phpckan.PNG" height="50px" alt="PHPC logo"></a>
       </div>
-
       <nav id="navbar" class="navbar">
-        <ul >
-          <li><a class="nav-link scrollto " href="./index.html">Home</a></li>
+        <ul>
+          <li><a class="nav-link scrollto" href="./index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="./about.html">About</a></li>
           <li><a class="nav-link scrollto" href="./services.html">Our Services</a></li>
           <li><a class="nav-link scrollto active" href="./news.html">News</a></li>
@@ -69,164 +276,193 @@
           <li><a class="nav-link scrollto" href="./contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= hero Section ======= -->
-
-
-
-
-  </section><!-- End Hero Section -->
-
-
-
-
-
   <main id="main">
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <!-- Back to News -->
+            <a href="./news.html" class="back-to-news">
+              <i class="bi bi-arrow-left"></i> Back to News
+            </a>
+            
+            <h2>Latest News and Events</h2>
+            <hr>
+            
+            <!-- Article Meta -->
+            <div class="article-meta">
+              <span class="badge">CSR Activity</span>
+              <span class="date"><i class="bi bi-calendar3"></i> May 26, 2021</span>
+              <span class="date"><i class="bi bi-clock"></i> 4 min read</span>
+            </div>
+            
+            <h4>PHPC Corporate Social Responsibility Activity 2 <br><small style="color: #6c757d;">Hoyo Elementary School, Silang, Cavite</small></h4>
+            <br>
+         
+            <!-- Image Carousel -->
+            <div id="carouselHoyoCSR" style="width: 100%; max-width: 95%;" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselHoyoCSR" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselHoyoCSR" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselHoyoCSR" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselHoyoCSR" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselHoyoCSR" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselHoyoCSR" data-bs-slide-to="5" aria-label="Slide 6"></button>
+              </div>
+              
+              <div class="carousel-inner">
+                <!-- Existing Image 1 -->
+                <div class="carousel-item active" data-bs-interval="4000">
+                  <img src="./assets/img/news/article2/hoyo.jpg" class="d-block w-100" alt="Hoyo Elementary School Outreach - Main Photo">
+                </div>
+                <!-- Existing Image 2 -->
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/article2/a1.jpg" class="d-block w-100" alt="Hoyo Elementary School Outreach - Photo 2">
+                </div>
+                <!-- Existing Image 3 -->
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/article2/a2.jpg" class="d-block w-100" alt="Hoyo Elementary School Outreach - Photo 3">
+                </div>
+                <!-- Existing Image 4 -->
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/article2/a3.jpg" class="d-block w-100" alt="Hoyo Elementary School Outreach - Photo 4">
+                </div>
+                <!-- NEW Image 5 -->
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/events/05262021-HoyoElementarySchool/DSC03182.JPG" class="d-block w-100" alt="Hoyo Elementary School Outreach - PHPC Team with Faculty">
+                </div>
+                <!-- NEW Image 6 -->
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/events/05262021-HoyoElementarySchool/DSC03183.JPG" class="d-block w-100" alt="Hoyo Elementary School Outreach - Computer Donation Ceremony">
+                </div>
+                <!-- NEW Image 7 -->
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/events/05262021-HoyoElementarySchool/DSC03185.JPG" class="d-block w-100" alt="Hoyo Elementary School Outreach - Group Photo with School Officials">
+                </div>
+              </div>
+              
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselHoyoCSR" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselHoyoCSR" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            
+            <br>
+            
+            <!-- Article Content -->
+            <div class="article-content">
+              <h3>
+                Despite the pandemic we are facing today, which is caused by the Coronavirus (also known as COVID-19), the executives of PHPC Co., Ltd. Inc. planned and discussed agendas on how to execute supportive actions that would help in some ways our Filipino citizens — especially at this moment in time — as an essential part of our Corporate Social Responsibility (CSR).
+              </h3>
+              
+              <div class="highlight-box">
+                <i class="bi bi-quote" style="font-size: 2rem; color: #0d6efd; opacity: 0.5;"></i>
+                <p style="margin: 10px 0 0;">"Our company aims to continue this kind of program and to widen our scope — not just by merely practicing our CSR, but by having the heart to continue serving and helping people in any way that we can."</p>
+              </div>
+              
+              <h3>
+                The company communicated with the Department of Education (DepEd) to help us look for schools who most need our assistance and help. From Metro Manila, our team travelled to <strong>Silang, Cavite</strong> to visit <strong>Hoyo Elementary School</strong>, one of the beneficiaries. 
+                <br><br>
+                Understanding the challenges that the education sector faced during the pandemic — particularly the shift to online and blended learning modalities — PHPC identified the urgent need for technological resources. As part of our commitment to bridging the digital divide, we <strong>donated computer sets</strong> that will surely be helpful for the faculty and students in adapting to the new normal in education.
+                <br><br>
+                <strong style="color: #0d6efd; font-size: 1.1rem;">💻 DONATION OF COMPUTER AT HOYO ELEMENTARY SCHOOL</strong>
+                <br><br>
+                This initiative reflects PHPC's core values of <strong>malasakit</strong> (compassion) and <strong>bayanihan</strong> (community spirit), demonstrating that even in challenging times, we remain steadfast in our mission to uplift Filipino communities. The smiles and gratitude expressed by the teachers and school administrators of Hoyo Elementary School serve as a powerful reminder that small acts of kindness can create lasting impacts.
+                <br><br>
+                Our company aims to continue this kind of program and to widen our scope — not just by merely practicing our CSR, but by having the heart to continue serving and helping people in any way that we can. We believe that investing in education is investing in the future of our nation.
+              </h3>
+            </div>
 
-<div id="about">
-
- <div class="container">
- <div class="row">
-    <div class="col-lg-9">
-        <h2>
-         Latest News and Events
-        </h2>
-        <hr>
-        <small>May 26, 2021</small>
-        <h4>PHPC Corporate Social Responsibility Activity 2 <br><small>Hoyo Elementary School</small></h4>
-        <br>
-     
-        <div id="carouselExampleControls" style="width: 95%" class="carousel slide carousel-fade" data-bs-ride="carousel">
-         <div class="carousel-inner">
-
-           <div class="carousel-item active" data-bs-interval="5000">
-             <img src="./assets/img/news/article2/hoyo.jpg"   class="d-block w-100" alt="..." >
-           </div>
-
-           <div class="carousel-item" data-bs-interval="5000">
-             <img src="./assets/img/news/article2/a1.jpg" class="d-block w-100" alt="..." >
-           </div>
-
-           <div class="carousel-item" data-bs-interval="5000">
-             <img src="./assets/img/news/article2/a2.jpg"  class="d-block w-100" alt="..." >
-           </div>
-
-           <div class="carousel-item" data-bs-interval="5000">
-            <img src="./assets/img/news/article2/a3.jpg"  class="d-block w-100" alt="..." >
+            <!-- Share Buttons -->
+            <div class="share-buttons">
+              <span style="color: #6c757d; font-size: 0.9rem; display: flex; align-items: center;">Share:</span>
+              <a href="#" class="share-btn facebook"><i class="bi bi-facebook"></i> Facebook</a>
+              <a href="#" class="share-btn twitter"><i class="bi bi-twitter"></i> Twitter</a>
+              <a href="#" class="share-btn linkedin"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            </div>
+            
           </div>
+          
+          <!-- Sidebar -->
+          <div class="col-lg-3">
+            <div class="sidebar-recent">
+              <b>Recent Posts</b>
+              <ul>
+                <li><a href="./17national-excellence.html">17th National Excellence Award 🏆</a></li>
+                <li><a href="./12MSafetyManHours.html">12 Million Safe Man-Hours</a></li>
+                <li><a href="./11MSafetyManHours.html">11 Million Safe Man-Hours</a></li>
+                <li><a href="./10MSafetyManHours.html">10 Million Safe Man-Hours</a></li>
+                <li><a href="./9MSafetyManHours.html">9 Million Safe Man-Hours</a></li>
+                <li><a href="./8MSafetyManHours.html">8 Million Safe Man-Hours</a></li>
+                <li><a href="./7MSafetyManHours.html">7 Million Safe Man-Hours</a></li>
+                <li><a href="./CorporateSocialResponsibility6.html">CSR — La Mesa Tree Planting 🌱</a></li>
+                <li><a href="./CorporateSocialResponsibility5.html">CSR — Marinduque Academy</a></li>
+                <li><a href="./CorporateSocialResponsibility4.html">CSR — Langkaan Elementary</a></li>
+                <li><a href="./CorporateSocialResponsibility3.html">CSR — Lumil Integrated NHS</a></li>
+                <li><a href="./CorporateSocialResponsibility2.html" class="active">CSR — Hoyo Elementary</a></li>
+                <li><a href="./CorporateSocialResponsibility1.html">CSR — Sta. Monica Elementary</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main><!-- End #main -->
 
-         </div>
-         <button  style="background:none;border:none;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span style="color:white" class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button style="background:none;border:none;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span  style="color:white" class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-       </div>
-       <br>
-       <h3>
-        Despite of the pandemic we are facing today, which is caused by the Coronavirus (also known as COVID-19), the executives of PHPC Co., Ltd. Inc. planned and discussed agendas on how to execute supportive actions that would help in some ways our Filipino citizens especially at this moment in time as essential part also of our Corporate Social Responsibility (CSR).
-        <br><br>
-        The company communicated with DepEd to help us look for schools who most need our assistance and help. From Metro Manila, our team travelled to Silang, Cavite to visit Hoyo Elementary School, one of the beneficiaries. We have donated computers sets that will surely be helpful for the faculty.
-        <br><br>
-        Our company aims to continue this kind of program and to widen our scope not just by merely practicing our CSR but having the heart to continue serving and helping people in any way that we can.
-       </h3>
-     </div>
-     <div class="col-lg-2" style="border-left:1px solid rgb(224, 224, 224)">
-       <b>Recent Post</b>
-
-        <br><br/>
-        <ul>
-          <li><a href="./CorporateSocialResponsibility9.html">PHPC Corporate Social Responsibility Activity 9  </a></li>
-          <li><a href="./CorporateSocialResponsibility8.html">PHPC Corporate Social Responsibility Activity 8  </a></li>
-          <li><a href="./CorporateSocialResponsibility7.html">PHPC Corporate Social Responsibility Activity 7  </a></li>
-          <li><a href="./CorporateSocialResponsibility6.html">PHPC Corporate Social Responsibility Activity 6  </a></li>
-          <li><a href="./CorporateSocialResponsibility5.html">PHPC Corporate Social Responsibility Activity 5  </a></li>
-          <li><a href="./CorporateSocialResponsibility4.html">PHPC Corporate Social Responsibility Activity 4  </a></li>
-          <li><a href="./CorporateSocialResponsibility3.html">PHPC Corporate Social Responsibility Activity 3  </a></li>
-          <li><a href="./CorporateSocialResponsibility2.html">PHPC Corporate Social Responsibility Activity 2  </a></li>
-          <li><a href="./CorporateSocialResponsibility1.html">PHPC Corporate Social Responsibility Activity 1  </a></li>
-        </ul>
-     </div>
- </div>
-</div>
-
-
-  </main>
-  <!-- End #main -->
-
-
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer" style="padding:0px !important; margin:0px !important;border:0px !important" > 
-  <section id="call-to-action"  style="color:white !important; padding-bottom: 10px !important">
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer" style="padding:0px !important; margin:0px !important;border:0px !important"> 
+    <section id="call-to-action" style="color:white !important; padding-bottom: 10px !important">
       <div class="row">
-        <div class="col-lg-4"><img src="./assets/img/ISO.png" width="280px" alt=""></div>
+        <div class="col-lg-4"><img src="./assets/img/ISO.png" width="280px" alt="ISO certification"></div>
         <div class="col-lg-6" style="text-align: left !important;">
           <br>
-   
-           <h5>Office Address</h5>
-           <a href="./contact.html" style="color:white !important">Head Office</a> <br>
-  <ul class="list-unstyled">
-    <li><i class="bi bi-map" style="color:rgb(124, 180, 124) !important;padding-left:10px !important"></i> 11th Floor,
-      Oledan Square 6788 Ayala Avenue, Makati City, Philippines</li>
-    <li><i class="bi bi-phone" style="color:rgb(126, 172, 126) !important;padding-left:10px !important"></i> +632 8
-      886-6974 to 83 </li>
-    <a href="./contact.html" style="color:white !important" >Satellite Office</a>
-    <li><i class="bi-map" style="color:rgb(131, 197, 131) !important;padding-left:10px !important"></i> 2nd St. Block 4
-      Lot 6 Meridian Industrial Complex, Sta. Rosa City, Laguna</li>
-    <li><i class="bi bi-telephone" style="color:rgb(141, 192, 141) !important;padding-left:10px !important"></i> +634 9
-      503-4720</li>
-  </ul>
-          
-        </div>
-
-      
-        <div class="col-lg-1" style="text-align: left !important;color:rgb(235, 235, 235) !important">
-          <br>
-          <br>
+          <h5>📍 Office Address</h5>
+          <a href="./contact.html" style="color:white !important">Head Office</a> <br>
           <ul class="list-unstyled">
-            <li><a href="./about.html" style="color:white !important"> About</a></li>
+            <li><i class="bi bi-map" style="color:rgb(124, 180, 124) !important;padding-left:10px !important"></i> 11th Floor, Oledan Square 6788 Ayala Avenue, Makati City, Philippines</li>
+            <li><i class="bi bi-phone" style="color:rgb(126, 172, 126) !important;padding-left:10px !important"></i> +632 8 886-6974 to 83 </li>
+            <a href="./contact.html" style="color:white !important">Satellite Office</a>
+            <li><i class="bi-map" style="color:rgb(131, 197, 131) !important;padding-left:10px !important"></i> 2nd St. Block 4 Lot 6 Meridian Industrial Complex, Sta. Rosa City, Laguna</li>
+            <li><i class="bi bi-telephone" style="color:rgb(141, 192, 141) !important;padding-left:10px !important"></i> +634 9 503-4720</li>
+          </ul>
+        </div>
+        <div class="col-lg-1" style="text-align: left !important;color:rgb(235, 235, 235) !important">
+          <br><br>
+          <ul class="list-unstyled">
+            <li><a href="./about.html" style="color:white !important">About Us</a></li>
             <li><a href="./services.html" style="color:white !important">Services</a></li>
             <li><a href="./news.html" style="color:white !important">News</a></li>
             <li><a href="./org.html" style="color:white !important">Organization</a></li>
-            <li><a href="./careers.html"style="color:white !important">Careers</a></li>
-            <li><a href="./contact.html"style="color:white !important">Contact</a></li>
+            <li><a href="./careers.html" style="color:white !important">Careers</a></li>
+            <li><a href="./contact.html" style="color:white !important">Contact</a></li>
           </ul>
         </div>
-
-       </div>
-
- 
-      
-
-    
-   
-    <div class="row" >
-      <div align="center" id="myicons">
-        <a href="https://twitter.com/PHPCCoLtdInc" class="twitter"><i class="bi bi-twitter"></i></a> 
-        <a href="https://www.facebook.com/PHPCCoLtdInc" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.linkedin.com/company/phpc-co.-ltd.-inc." class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
-      <div class="col-md-6" >
-        PHPC Co., Ltd, Inc © 2021. All Rights Reserved. 
+      <div class="row">
+        <div align="center" id="myicons">
+          <a href="https://twitter.com/PHPCCoLtdInc" class="twitter"><i class="bi bi-twitter"></i></a> 
+          <a href="https://www.facebook.com/PHPCCoLtdInc" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/phpc-co.-ltd.-inc." class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="col-md-6">
+          PHPC Co., Ltd, Inc © 2021. All Rights Reserved. 
+        </div>
+        <div class="col-md-6">
+          <a href="./disclaimer.html" style="color:white !important"><small>Disclaimer</small></a> | <a href="./termsofuse.html" style="color:white !important"><small>Terms and use</small></a>
+        </div>
       </div>
-      <div class="col-md-6">
-       <a href="./disclaimer.html" style="color:white !important"><small>Disclaimer</small></a> | <a href="./termsofuse.html" style="color:white !important"><small >Terms and use</small></a>
-      
-       
-      </div>
-    </div>
-  </section>
-
-
-</footer><!-- End Footer -->
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    </section>
+  </footer><!-- End Footer -->
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
@@ -240,5 +476,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

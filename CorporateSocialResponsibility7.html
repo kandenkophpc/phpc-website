@@ -5,10 +5,11 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>PHPC Co., Ltd. Inc</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+  <title>PHPC Co., Ltd. Inc · Dugo Mula Sa Puso Blood Donation Drive</title>
+  <meta content="PHPC Co., Ltd. Inc. hosts Dugo Mula Sa Puso blood donation drive at Metro Lipa Medical Center in partnership with Philippine Red Cross Lipa City" name="description">
+  <meta content="CSR,blood donation,PHPCares,Dugo Mula Sa Puso,Metro Lipa Medical Center,Philippine Red Cross,PHPC" name="keywords">
   <meta name="robots" content="noindex,nofollow"> 
+  
   <!-- Favicons -->
   <link href="assets/img/kan.ico" rel="icon">
   
@@ -24,17 +25,258 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.min.css" >
   <link rel="stylesheet" href="./assets/fontawesome/css/fontawesome.css" >
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-
+  <style>
+    .article-content h3 {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4a5568;
+      font-weight: 400;
+    }
+    
+    .article-content .highlight-box {
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      border-left: 4px solid #dc2626;
+      padding: 20px 25px;
+      border-radius: 0 12px 12px 0;
+      margin: 25px 0;
+      font-style: italic;
+      color: #991b1b;
+    }
+    
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 15px 0 20px;
+    }
+    
+    .article-meta .badge {
+      background: linear-gradient(135deg, #dc2626, #b91c1c);
+      color: white;
+      padding: 6px 15px;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    
+    .article-meta .date {
+      color: #6c757d;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    
+    .article-meta .date i {
+      color: #dc2626;
+    }
+    
+    .carousel {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+    }
+    
+    .carousel-item img {
+      height: 450px;
+      object-fit: contain;
+      background: #f8f9fa;
+    }
+    
+    .carousel-control-prev,
+    .carousel-control-next {
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      margin: 0 15px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .carousel:hover .carousel-control-prev,
+    .carousel:hover .carousel-control-next {
+      opacity: 1;
+    }
+    
+    .carousel-indicators {
+      margin-bottom: 15px;
+    }
+    
+    .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 2px solid white;
+      background: transparent;
+      opacity: 0.7;
+    }
+    
+    .carousel-indicators button.active {
+      background: white;
+      opacity: 1;
+    }
+    
+    .sidebar-recent {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 12px;
+    }
+    
+    .sidebar-recent b {
+      font-size: 1.1rem;
+      color: #1e2c3a;
+      display: block;
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #dc2626;
+    }
+    
+    .sidebar-recent ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    .sidebar-recent ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .sidebar-recent ul li:last-child {
+      border-bottom: none;
+    }
+    
+    .sidebar-recent ul li a {
+      color: #4a5568;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+      display: block;
+    }
+    
+    .sidebar-recent ul li a:hover {
+      color: #dc2626;
+    }
+    
+    .sidebar-recent ul li a.active {
+      color: #dc2626;
+      font-weight: 600;
+    }
+    
+    .share-buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e9ecef;
+    }
+    
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    
+    .share-btn.facebook {
+      background: #1877f2;
+      color: white;
+    }
+    
+    .share-btn.twitter {
+      background: #1da1f2;
+      color: white;
+    }
+    
+    .share-btn.linkedin {
+      background: #0a66c2;
+      color: white;
+    }
+    
+    .share-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      color: white;
+    }
+    
+    .back-to-news {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #dc2626;
+      font-weight: 600;
+      text-decoration: none;
+      margin-bottom: 25px;
+      transition: gap 0.3s ease;
+    }
+    
+    .back-to-news:hover {
+      gap: 12px;
+      color: #b91c1c;
+    }
+    
+    .partners-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin: 25px 0;
+    }
+    
+    .partner-card {
+      flex: 1;
+      min-width: 200px;
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      border: 1px solid #e9ecef;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    }
+    
+    .partner-card .partner-icon {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    
+    .partner-card h6 {
+      font-weight: 700;
+      color: #1e2c3a;
+      margin-bottom: 5px;
+    }
+    
+    .partner-card small {
+      color: #6c757d;
+    }
+    
+    @media (max-width: 768px) {
+      .carousel-item img {
+        height: 250px;
+      }
+      
+      .article-content h3 {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-
-
-  <!-- ======= Top Bar ======= -->
   <section id="topbar" class="d-flex align-items-center">
     <div class="container d-flex justify-content-center justify-content-md-between">
       <div class="contact-info d-flex align-items-center">
@@ -47,20 +289,16 @@
         <a href="https://www.linkedin.com/company/phpc-co.-ltd.-inc." class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
     </div>
-  </section><!-- End Top Bar-->
+  </section>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="d-flex align-items-center">
     <div class="container d-flex justify-content-between">
-
       <div id="logo">
-        <a href="index.html"><img src="assets/img/phpckan.PNG" height="50px" alt=""></span></a>
-        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="index.html"><img src="assets/img/phpckan.PNG" height="50px" alt="PHPC logo"></a>
       </div>
-
       <nav id="navbar" class="navbar">
-        <ul >
-          <li><a class="nav-link scrollto " href="./index.html">Home</a></li>
+        <ul>
+          <li><a class="nav-link scrollto" href="./index.html">Home</a></li>
           <li><a class="nav-link scrollto" href="./about.html">About</a></li>
           <li><a class="nav-link scrollto" href="./services.html">Our Services</a></li>
           <li><a class="nav-link scrollto active" href="./news.html">News</a></li>
@@ -69,173 +307,221 @@
           <li><a class="nav-link scrollto" href="./contact.html">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+      </nav>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= hero Section ======= -->
-
-
-
-
-  </section><!-- End Hero Section -->
-
-
-
-
+  </header>
 
   <main id="main">
-S
-<div id="about">
-
- <div class="container">
- <div class="row">
-    <div class="col-lg-9">
-        <h2>
-         Latest News and Events
-        </h2>
-        <hr>
-        <small>June,2024</small>
-        <h4>PHPC Corporate Social Responsibility Activity 7<br><small>Cultivating Green: PHPC's Blood Letting/Donation in cooperation with Metro Lipa Medical Center & Red Cross Lipa Chapter</small></h4>
-        <br>
-     
-        <div id="carouselExampleControls" style="width: 95%" class="carousel slide carousel-fade" data-bs-ride="carousel">
-         <div class="carousel-inner">
-          <div class="carousel-item active" data-bs-interval="5000">
-            <img src="./assets/img/CSR6a1.png"  class="d-block w-100" alt="..." >
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9">
+            <a href="./news.html" class="back-to-news">
+              <i class="bi bi-arrow-left"></i> Back to News
+            </a>
+            
+            <h2>Latest News and Events</h2>
+            <hr>
+            
+            <div class="article-meta">
+              <span class="badge">🩸 CSR Activity</span>
+              <span class="date"><i class="bi bi-calendar3"></i> June 8, 2024</span>
+              <span class="date"><i class="bi bi-clock"></i> 4 min read</span>
+            </div>
+            
+            <h4>PHPC Corporate Social Responsibility Activity 7 <br><small style="color: #6c757d;">"Dugo Mula Sa Puso" Blood Donation Drive at Metro Lipa Medical Center</small></h4>
+            <br>
+         
+            <!-- Image Carousel -->
+            <div id="carouselBloodCSR" style="width: 100%; max-width: 95%;" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselBloodCSR" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselBloodCSR" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselBloodCSR" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselBloodCSR" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselBloodCSR" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselBloodCSR" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselBloodCSR" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselBloodCSR" data-bs-slide-to="7" aria-label="Slide 8"></button>
+              </div>
+              
+              <div class="carousel-inner">
+                <!-- Event Poster -->
+                <div class="carousel-item active" data-bs-interval="4000">
+                  <img src="./assets/img/news/events/06032024-bloodevent/blood-event.jpg" class="d-block w-100" alt="Dugo Mula Sa Puso Blood Donation Event Poster">
+                </div>
+                <!-- Event Photos -->
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/events/06032024-bloodevent/blood1.jpg" class="d-block w-100" alt="Blood Donation Drive - Photo 1">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/events/06032024-bloodevent/blood9.jpg" class="d-block w-100" alt="Blood Donation Drive - Photo 2">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/events/06032024-bloodevent/blood5.jpg" class="d-block w-100" alt="Blood Donation Drive - Photo 3">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/events/06032024-bloodevent/blood3.jpg" class="d-block w-100" alt="Blood Donation Drive - Photo 4">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/events/06032024-bloodevent/blood0.jpg" class="d-block w-100" alt="Blood Donation Drive - Photo 5">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/events/06032024-bloodevent/blood2.jpg" class="d-block w-100" alt="Blood Donation Drive - Photo 6">
+                </div>
+                <div class="carousel-item" data-bs-interval="4000">
+                  <img src="./assets/img/news/events/06032024-bloodevent/blood7.jpg" class="d-block w-100" alt="Blood Donation Drive - Photo 7">
+                </div>
+              </div>
+              
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselBloodCSR" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselBloodCSR" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            
+            <br>
+            
+            <!-- Partners Row -->
+            <div class="partners-row">
+              <div class="partner-card">
+                <div class="partner-icon">🏥</div>
+                <h6>Metro Lipa Medical Center</h6>
+                <small>In Cooperation With</small>
+              </div>
+              <div class="partner-card">
+                <div class="partner-icon">🩸</div>
+                <h6>Philippine National Red Cross</h6>
+                <small>Lipa City — In Partnership With</small>
+              </div>
+              <div class="partner-card">
+                <div class="partner-icon">💙</div>
+                <h6>PHPCares</h6>
+                <small>PHPC Co., Ltd. Inc. — KANDENKO Group</small>
+              </div>
+            </div>
+            
+            <div class="article-content">
+              <h3>
+                PHPC Co., Ltd. Inc., a proud member of the <strong>KANDENKO Group</strong> based in Makati City, successfully hosted its Corporate Social Responsibility initiative, <strong>PHPCares</strong>, with a heartfelt blood donation drive themed <strong>"DUGO MULA SA PUSO"</strong> (Blood from the Heart).
+              </h3>
+              
+              <div class="highlight-box">
+                <i class="bi bi-quote" style="font-size: 2rem; opacity: 0.5;"></i>
+                <p style="margin: 10px 0 0;">"Dugo Mula Sa Puso" — Blood from the Heart. This initiative underscores PHPC's commitment to giving back to the community and saving lives through voluntary blood donation. Every drop counts, and every donor is a hero."</p>
+              </div>
+              
+              <h3>
+                The event was organized in cooperation with <strong>Metro Lipa Medical Center (MLMC)</strong> and in partnership with the <strong>Philippine National Red Cross, Lipa City</strong>. Held on <strong>June 8, 2024</strong> at the Metro Lipa Medical Center, this lifesaving initiative brought together PHPC employees, partners, and members of the local community in a united effort to donate blood and support those in need.
+                <br><br>
+                <strong style="color: #dc2626;">🩸 The Importance of Blood Donation</strong>
+                <br><br>
+                Blood donation is one of the most direct and impactful ways to save lives. Every blood donation can help up to three patients in need — whether for emergency surgeries, cancer treatments, childbirth complications, or chronic illnesses. In the Philippines, the demand for safe blood is constant, and voluntary blood drives like PHPCares play a crucial role in maintaining the national blood supply.
+                <br><br>
+                <strong style="color: #dc2626;">🤝 A Community United for a Cause</strong>
+                <br><br>
+                The "Dugo Mula Sa Puso" blood drive exemplified the power of community partnership. With Metro Lipa Medical Center providing the venue and medical expertise, and the Philippine Red Cross ensuring proper blood collection and storage protocols, PHPC facilitated an event that was both safe and impactful. Volunteers and employees lined up throughout the day, demonstrating that the spirit of <strong>bayanihan</strong> (community unity) is alive and well.
+                <br><br>
+                <strong style="color: #dc2626;">💙 PHPCares: More Than Just a Program</strong>
+                <br><br>
+                PHPCares represents the company's ongoing commitment to corporate social responsibility that goes beyond business operations. From educational support to environmental initiatives, and now to health and wellness programs, PHPC continues to expand its reach and impact across Filipino communities. The "Dugo Mula Sa Puso" blood drive is a shining example of how companies can leverage their resources and networks to make a tangible difference in people's lives.
+                <br><br>
+                Our company extends its deepest gratitude to every donor, volunteer, and partner who made this event a success. Together, we proved that when we give from the heart, we can help save lives and strengthen our communities. PHPC remains committed to continuing programs like this, knowing that each act of kindness, no matter how small, ripples outward to create lasting change.
+              </h3>
+            </div>
+            
+            <div class="share-buttons">
+              <span style="color: #6c757d; font-size: 0.9rem; display: flex; align-items: center;">Share:</span>
+              <a href="#" class="share-btn facebook"><i class="bi bi-facebook"></i> Facebook</a>
+              <a href="#" class="share-btn twitter"><i class="bi bi-twitter"></i> Twitter</a>
+              <a href="#" class="share-btn linkedin"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            </div>
+            
           </div>
-
-           <div class="carousel-item " data-bs-interval="5000">
-             <img src="./assets/img/CSR6a2.png"   class="d-block w-100" alt="..." >
-           </div>
-
-           <div class="carousel-item" data-bs-interval="5000">
-            <img src="./assets/img/CSR6a3.png"  class="d-block w-100" alt="..." >
+          
+          <div class="col-lg-3">
+            <div class="sidebar-recent">
+              <b>Recent Posts</b>
+              <ul>
+                <li><a href="./17national-excellence.html">17th National Excellence Award 🏆</a></li>
+                <li><a href="./12MSafetyManHours.html">12 Million Safe Man-Hours</a></li>
+                <li><a href="./11MSafetyManHours.html">11 Million Safe Man-Hours 🎬</a></li>
+                <li><a href="./10MSafetyManHours.html">10 Million Safe Man-Hours</a></li>
+                <li><a href="./9MSafetyManHours.html">9 Million Safe Man-Hours</a></li>
+                <li><a href="./8MSafetyManHours.html">8 Million Safe Man-Hours</a></li>
+                <li><a href="./7MSafetyManHours.html">7 Million Safe Man-Hours</a></li>
+                <li><a href="./CorporateSocialResponsibility7.html" class="active">CSR — Dugo Mula Sa Puso 🩸</a></li>
+                <li><a href="./CorporateSocialResponsibility6.html">CSR — La Mesa Tree Planting 🌱</a></li>
+                <li><a href="./CorporateSocialResponsibility5.html">CSR — Marinduque Academy</a></li>
+                <li><a href="./CorporateSocialResponsibility4.html">CSR — Langkaan Elementary</a></li>
+                <li><a href="./CorporateSocialResponsibility3.html">CSR — Lumil Integrated NHS</a></li>
+                <li><a href="./CorporateSocialResponsibility2.html">CSR — Hoyo Elementary</a></li>
+                <li><a href="./CorporateSocialResponsibility1.html">CSR — Sta. Monica Elementary</a></li>
+              </ul>
+            </div>
           </div>
-          <div class="carousel-item" data-bs-interval="5000">
-            <img src="./assets/img/CSR6a4.png"  class="d-block w-100" alt="..." >
-          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 
-           <div class="carousel-item" data-bs-interval="5000">
-            <img src="./assets/img/CSR6a5.png"  class="d-block w-100" alt="..." >
-          </div>
-
- 
-
-         </div>
-         <button  style="background:none;border:none;" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span style="color:white" class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button style="background:none;border:none;" class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span  style="color:white" class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-       </div>
-       <br>
-       <h3>
-        In an era of heightened environmental consciousness, corporate social responsibility (CSR) initiatives have become paramount for businesses striving to make a positive impact. One such endeavor is the tree planting initiative undertaken by PHPC Co., Ltd. Inc. at the renowned La Mesa Watershed in Metro Manila, Philippines. This article delves into PHPC's commitment to environmental sustainability through its tree planting efforts and the significance of such initiatives in preserving vital ecosystems.
-       </h3>
-     </div>
-     <div class="col-lg-2" style="border-left:1px solid rgb(224, 224, 224)">
-       <b>Recent Post</b>
-
-        <br><br/>
-        <div class="col-lg-4 col-md-5 col-sm-12">
-      <h5 class="mb-3">RECENT POST</h5>
-      <ul class="list-group">
-          <li><a href="./CorporateSocialResponsibility9.html">PHPC Corporate Social Responsibility Activity 9  </a></li>
-          <li><a href="./CorporateSocialResponsibility8.html">PHPC Corporate Social Responsibility Activity 8  </a></li>
-          <li><a href="./CorporateSocialResponsibility7.html">PHPC Corporate Social Responsibility Activity 7  </a></li>
-          <li><a href="./CorporateSocialResponsibility6.html">PHPC Corporate Social Responsibility Activity 6  </a></li>
-          <li><a href="./CorporateSocialResponsibility5.html">PHPC Corporate Social Responsibility Activity 5  </a></li>
-          <li><a href="./CorporateSocialResponsibility4.html">PHPC Corporate Social Responsibility Activity 4  </a></li>
-          <li><a href="./CorporateSocialResponsibility3.html">PHPC Corporate Social Responsibility Activity 3  </a></li>
-          <li><a href="./CorporateSocialResponsibility2.html">PHPC Corporate Social Responsibility Activity 2  </a></li>
-          <li><a href="./CorporateSocialResponsibility1.html">PHPC Corporate Social Responsibility Activity 1  </a></li>
-        </ul>
-      </li>
-     </div>
- </div>
-</div>
-
-
-  </main><!-- End #main -->
-
-
-<!-- ======= Footer ======= -->
-<footer id="footer" class="footer" style="padding:0px !important; margin:0px !important;border:0px !important" > 
-  <section id="call-to-action"  style="color:white !important; padding-bottom: 10px !important">
+  <footer id="footer" class="footer" style="padding:0px !important; margin:0px !important;border:0px !important"> 
+    <section id="call-to-action" style="color:white !important; padding-bottom: 10px !important">
       <div class="row">
-        <div class="col-lg-4"><img src="./assets/img/ISO.png" width="280px" alt=""></div>
+        <div class="col-lg-4"><img src="./assets/img/ISO.png" width="280px" alt="ISO certification"></div>
         <div class="col-lg-6" style="text-align: left !important;">
           <br>
-   
-           <h5>Office Address</h5>
-           <a href="./contact.html" style="color:white !important">Head Office</a> <br>
-  <ul class="list-unstyled">
-    <li><i class="bi bi-map" style="color:rgb(124, 180, 124) !important;padding-left:10px !important"></i> 11th Floor,
-      Oledan Square 6788 Ayala Avenue, Makati City, Philippines</li>
-    <li><i class="bi bi-phone" style="color:rgb(126, 172, 126) !important;padding-left:10px !important"></i> +632 8
-      886-6974 to 83 </li>
-    <a href="./contact.html" style="color:white !important" >Satellite Office</a>
-    <li><i class="bi-map" style="color:rgb(131, 197, 131) !important;padding-left:10px !important"></i> 2nd St. Block 4
-      Lot 6 Meridian Industrial Complex, Sta. Rosa City, Laguna</li>
-    <li><i class="bi bi-telephone" style="color:rgb(141, 192, 141) !important;padding-left:10px !important"></i> +634 9
-      503-4720</li>
-  </ul>
-          
-        </div>
-
-      
-        <div class="col-lg-1" style="text-align: left !important;color:rgb(235, 235, 235) !important">
-          <br>
-          <br>
+          <h5>📍 Office Address</h5>
+          <a href="./contact.html" style="color:white !important">Head Office</a> <br>
           <ul class="list-unstyled">
-            <li><a href="./about.html" style="color:white !important"> About Us</a></li>
+            <li><i class="bi bi-map" style="color:rgb(124, 180, 124) !important;padding-left:10px !important"></i> 11th Floor, Oledan Square 6788 Ayala Avenue, Makati City, Philippines</li>
+            <li><i class="bi bi-phone" style="color:rgb(126, 172, 126) !important;padding-left:10px !important"></i> +632 8 886-6974 to 83 </li>
+            <a href="./contact.html" style="color:white !important">Satellite Office</a>
+            <li><i class="bi-map" style="color:rgb(131, 197, 131) !important;padding-left:10px !important"></i> 2nd St. Block 4 Lot 6 Meridian Industrial Complex, Sta. Rosa City, Laguna</li>
+            <li><i class="bi bi-telephone" style="color:rgb(141, 192, 141) !important;padding-left:10px !important"></i> +634 9 503-4720</li>
+          </ul>
+        </div>
+        <div class="col-lg-1" style="text-align: left !important;color:rgb(235, 235, 235) !important">
+          <br><br>
+          <ul class="list-unstyled">
+            <li><a href="./about.html" style="color:white !important">About Us</a></li>
             <li><a href="./services.html" style="color:white !important">Services</a></li>
             <li><a href="./news.html" style="color:white !important">News</a></li>
             <li><a href="./org.html" style="color:white !important">Organization</a></li>
-            <li><a href="./careers.html"style="color:white !important">Careers</a></li>
-            <li><a href="./contact.html"style="color:white !important">Contact</a></li>
+            <li><a href="./careers.html" style="color:white !important">Careers</a></li>
+            <li><a href="./contact.html" style="color:white !important">Contact</a></li>
           </ul>
         </div>
-
-       </div>
-   
-    <div class="row" >
-      <div align="center" id="myicons">
-        <a href="https://twitter.com/PHPCCoLtdInc" class="twitter"><i class="bi bi-twitter"></i></a> 
-        <a href="https://www.facebook.com/PHPCCoLtdInc" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.linkedin.com/company/phpc-co.-ltd.-inc." class="linkedin"><i class="bi bi-linkedin"></i></a>
       </div>
-      <div class="col-md-6" >
-        PHPC Co., Ltd, Inc © 2021. All Rights Reserved. 
+      <div class="row">
+        <div align="center" id="myicons">
+          <a href="https://twitter.com/PHPCCoLtdInc" class="twitter"><i class="bi bi-twitter"></i></a> 
+          <a href="https://www.facebook.com/PHPCCoLtdInc" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/phpc-co.-ltd.-inc." class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+        <div class="col-md-6">
+          PHPC Co., Ltd, Inc © 2021. All Rights Reserved. 
+        </div>
+        <div class="col-md-6">
+          <a href="./disclaimer.html" style="color:white !important"><small>Disclaimer</small></a> | <a href="./termsofuse.html" style="color:white !important"><small>Terms and use</small></a>
+        </div>
       </div>
-      <div class="col-md-6">
-       <a href="./disclaimer.html" style="color:white !important"><small>Disclaimer</small></a> | <a href="./termsofuse.html" style="color:white !important"><small >Terms and use</small></a>
-      
-       
-      </div>
-    </div>
-  </section>
+    </section>
+  </footer>
+  
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-
-</footer><!-- End Footer -->
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
