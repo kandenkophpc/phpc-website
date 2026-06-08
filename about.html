@@ -28,7 +28,7 @@
   <link href="assets/css/style.css" rel="stylesheet">
   
   <style>
-    /* Carousel styles */
+    /* Safety Carousel styles */
     .safety-section {
       padding: 60px 0 80px;
       background-color: #f8f9fa;
@@ -129,12 +129,69 @@
     .carousel-control-next {
       width: 10%;
     }
+
+    /* Certifications Carousel styles */
+    .certifications-section {
+      padding: 60px 0 80px;
+      background: rgb(1, 1, 105) !important;
+    }
+    
+    .certifications-carousel-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .certifications-carousel-container {
+      width: 100%;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    
+    .certifications-carousel-container .carousel-item {
+      height: 500px;
+      background-color: #ffffff;
+    }
+    
+    .certifications-carousel-container .carousel-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+    
+    .certifications-carousel-container .carousel-indicators button {
+      background-color: #ffffff !important;
+      border: 2px solid #ffc107 !important;
+    }
+    
+    .certifications-carousel-container .carousel-indicators button.active {
+      background-color: #ffc107 !important;
+    }
+    
+    .certifications-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      color: #ffffff;
+      text-align: center;
+    }
     
     @media (max-width: 992px) {
       .safety-carousel-container .carousel-item {
         height: 500px;
       }
       .safety-title {
+        font-size: 1.8rem;
+      }
+      .certifications-carousel-container .carousel-item {
+        height: 400px;
+      }
+      .certifications-title {
         font-size: 1.8rem;
       }
     }
@@ -146,10 +203,19 @@
       .safety-title {
         font-size: 1.5rem;
       }
+      .certifications-carousel-container .carousel-item {
+        height: 300px;
+      }
+      .certifications-title {
+        font-size: 1.5rem;
+      }
     }
     
     @media (max-width: 576px) {
       .safety-carousel-container .carousel-item {
+        height: 250px;
+      }
+      .certifications-carousel-container .carousel-item {
         height: 250px;
       }
     }
@@ -157,6 +223,9 @@
     @media (min-width: 1600px) {
       .safety-carousel-container .carousel-item {
         height: 700px;
+      }
+      .certifications-carousel-container .carousel-item {
+        height: 600px;
       }
     }
   </style>
@@ -180,6 +249,7 @@
         <div class="swiper-slide" style="background-image: url('./assets/img/engr1.png');"></div>
         <div class="swiper-slide" style="background-image: url('./assets/img/SirShirota.jpg');"></div>
         <div class="swiper-slide" style="background-image: url('./assets/img/hero-carousel/engr.png');"></div>
+      </div>
     </div>
   </section><!-- End Hero Section -->
 
@@ -206,6 +276,7 @@
               <li class="list-group-item"><b>Contact</b>: +632 8 886-6974 to 83</li>
             </ul>
           </div>
+        </div>
       </div>
     </section><!-- End About Section -->
 
@@ -253,6 +324,7 @@
               </ul>
             </h3>
           </div>
+        </div>
       </div>
     </section>
 
@@ -288,8 +360,11 @@
                   <li class="list-group-item"><strong>C</strong>ommit to meeting all compliance obligations across sectors.</li>
                 </ul>
               </div>
+            </div>
           </div>
+        </div>
       </section>
+    </section>
 
     <!-- ========================================== -->
     <!-- SAFETY ACHIEVEMENTS CAROUSEL SLIDESHOW -->
@@ -300,10 +375,8 @@
         
         <div class="row justify-content-center">
           <div class="col-12">
-            <!-- Bootstrap 5 Carousel - First image (12M) is active, starts when visible -->
             <div id="improvedSafetyCarousel" class="carousel slide carousel-fade safety-carousel-container" data-bs-ride="false" data-bs-interval="4000">
               
-              <!-- Indicators - First indicator is active -->
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#improvedSafetyCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#improvedSafetyCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -315,7 +388,6 @@
                 <button type="button" data-bs-target="#improvedSafetyCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
               </div>
 
-              <!-- Slides - First image (12M) is active -->
               <div class="carousel-inner">
                 <div class="carousel-item active">
                   <a href="./error.html" target="_blank">
@@ -357,8 +429,8 @@
                     <img src="./assets/img/5-M-SafetyHours.png" class="d-block w-100" alt="5 Million Safe Man-hours" loading="lazy">
                   </a>
                 </div>
+              </div>
 
-              <!-- Controls -->
               <button class="carousel-control-prev" type="button" data-bs-target="#improvedSafetyCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -374,35 +446,54 @@
               <span class="text-muted">Click on any image to view full details | A testament to our unwavering commitment to workplace safety and excellence</span>
             </p>
           </div>
+        </div>
       </div>
     </section>
 
-    <!-- ======= Certifications Section ======= -->
-    <section id="certifications" style="background:rgb(1, 1, 105) !important">
-      <div class="container" data-aos="zoom-out">
-        <div class="section-header">
-          <h3 align="center" style="color:white !important;"><b>Certifications</b></h3> 
-        </div>
-        <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="./assets/img/iso/4.png" width="100%" alt="ISO Certification" loading="lazy">
+    <!-- ========================================== -->
+    <!-- CERTIFICATIONS CAROUSEL SLIDESHOW -->
+    <!-- ========================================== -->
+    <section id="certifications" class="certifications-section">
+      <div class="certifications-carousel-wrapper">
+        <h2 class="certifications-title"><b>Certifications</b></h2>
+        
+        <div class="row justify-content-center">
+          <div class="col-12">
+            <div id="certificationsCarousel" class="carousel slide carousel-fade certifications-carousel-container" data-bs-ride="carousel" data-bs-interval="5000">
+              
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#certificationsCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Certification 1"></button>
+                <button type="button" data-bs-target="#certificationsCarousel" data-bs-slide-to="1" aria-label="Certification 2"></button>
+                <button type="button" data-bs-target="#certificationsCarousel" data-bs-slide-to="2" aria-label="Certification 3"></button>
+                <button type="button" data-bs-target="#certificationsCarousel" data-bs-slide-to="3" aria-label="Certification 4"></button>
               </div>
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="./assets/img/iso/3.png" width="100%" alt="ISO Certification" loading="lazy">
+
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="./assets/img/iso/4.png" class="d-block w-100" alt="ISO Certification 4" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/img/iso/3.png" class="d-block w-100" alt="ISO Certification 3" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/img/iso/2.png" class="d-block w-100" alt="ISO Certification 2" loading="lazy">
+                </div>
+                <div class="carousel-item">
+                  <img src="./assets/img/iso/1.png" class="d-block w-100" alt="ISO Certification 1" loading="lazy">
+                </div>
               </div>
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="./assets/img/iso/2.png" width="100%" alt="ISO Certification" loading="lazy">
-              </div>
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="./assets/img/iso/1.png" width="100%" alt="ISO Certification" loading="lazy">
-              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#certificationsCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#certificationsCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
-          <div class="swiper-pagination"></div>
+        </div>
       </div>
     </section>
 
@@ -420,28 +511,25 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Intersection Observer for Carousel Auto-Start from 1st image -->
+  <!-- Intersection Observer for Safety Carousel Auto-Start from 1st image -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const carouselElement = document.getElementById('improvedSafetyCarousel');
       
       if (!carouselElement) return;
 
-      // Initialize Bootstrap carousel manually (paused initially)
       const carousel = new bootstrap.Carousel(carouselElement, {
         interval: 4000,
-        ride: false, // Don't auto-start
+        ride: false,
         pause: false,
         wrap: true
       });
 
       let carouselStarted = false;
-      let wasReset = false; // Track if we've reset to first slide
+      let wasReset = false;
 
-      // Function to reset and start the carousel from the first image
       function resetAndStartCarousel() {
         if (!wasReset) {
-          // Go to first slide
           carousel.to(0);
           wasReset = true;
         }
@@ -453,37 +541,31 @@
         }
       }
 
-      // Function to stop the carousel and mark for reset
       function stopAndResetCarousel() {
         if (carouselStarted) {
           carouselStarted = false;
           carouselElement.removeAttribute('data-bs-ride');
           carousel.pause();
         }
-        wasReset = false; // Reset flag so it goes back to first slide next time
+        wasReset = false;
       }
 
-      // Create Intersection Observer
       const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
-            // Carousel is visible - reset to first slide and start
             resetAndStartCarousel();
           } else {
-            // Carousel is not visible - stop and prepare for reset
             stopAndResetCarousel();
           }
         });
       }, {
-        root: null, // Use viewport
+        root: null,
         rootMargin: '0px',
-        threshold: 0.15 // Start when at least 15% of carousel is visible
+        threshold: 0.15
       });
 
-      // Start observing the carousel
       observer.observe(carouselElement);
 
-      // Pause carousel when user hovers over it
       carouselElement.addEventListener('mouseenter', function () {
         carousel.pause();
       });
